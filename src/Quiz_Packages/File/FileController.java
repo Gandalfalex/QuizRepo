@@ -19,7 +19,7 @@ public class FileController {
     private GUI_Frage gui_Frage;
     private List<String> emptyList = new ArrayList<>();
     private List<Frage> objectList = new ArrayList<>();
-    private String path = System.getProperty("user.dir") + "\\src\\new.txt";                                            //StandartSpeicherpfad, wird sonst nachträglich verändert
+    private String path = System.getProperty("user.dir") + "\\src\\Quiz_Packages\\new.txt";                                            //StandartSpeicherpfad, wird sonst nachträglich verändert
     private String stat = System.getProperty("user.dir") + "\\Stats.txt";
     private int chances = 0;
     private int amountOfQuestions = 0;

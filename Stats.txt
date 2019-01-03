@@ -1,6 +1,140 @@
 
-Die Frage:Frage28
- wurde mit: denke
-beantwortet. Richtig wäre: Denke
- gewesen. Benötigt wurden  1048 Millisekunden. Der Spieler benötigte dafür 1 Versuche. Aktuell 0 
+Die Frage:Frage24
+ wurde mit: r
+beantwortet. Richtig wäre: e
+ gewesen. Benötigt wurden  1448 Millisekunden. Der Spieler benötigte dafür 1 Versuche. Aktuell 0 
 
+
+Die Frage:Frage23
+ wurde mit: Ulfheonar
+beantwortet. Richtig wäre: Heimdall
+ gewesen. Benötigt wurden  1179 Millisekunden. Der Spieler benötigte dafür 1 Versuche. Aktuell 0 
+
+
+Die Frage:Frage28
+ wurde mit: denken
+beantwortet. Richtig wäre: Denke
+ gewesen. Benötigt wurden  763 Millisekunden. Der Spieler benötigte dafür 1 Versuche. Aktuell 0 
+
+
+Die Frage:Frage2
+ wurde mit: H
+beantwortet. Richtig wäre: F
+ gewesen. Benötigt wurden  636 Millisekunden. Der Spieler benötigte dafür 1 Versuche. Aktuell 0 
+
+
+Die Frage:Frage27
+ wurde mit: uiiu
+beantwortet. Richtig wäre: uuii
+ gewesen. Benötigt wurden  202 Millisekunden. Der Spieler benötigte dafür 1 Versuche. Aktuell 0 
+
+
+Die Frage:Frage10
+ wurde mit: hahaha
+beantwortet. Richtig wäre: wow
+ gewesen. Benötigt wurden  201 Millisekunden. Der Spieler benötigte dafür 1 Versuche. Aktuell 0 
+
+
+Die Frage:Frage6
+ wurde mit: W
+beantwortet. Richtig wäre: X
+ gewesen. Benötigt wurden  210 Millisekunden. Der Spieler benötigte dafür 1 Versuche. Aktuell 0 
+
+
+Die Frage:Frage11
+ wurde mit: ^-^
+beantwortet. Richtig wäre: xP
+ gewesen. Benötigt wurden  224 Millisekunden. Der Spieler benötigte dafür 1 Versuche. Aktuell 0 
+
+
+Die Frage:Frage16
+ wurde mit: Martell
+beantwortet. Richtig wäre: Stark
+ gewesen. Benötigt wurden  215 Millisekunden. Der Spieler benötigte dafür 1 Versuche. Aktuell 0 
+
+
+Die Frage:Frage15
+ wurde mit: Freya
+beantwortet. Richtig wäre: Odin
+ gewesen. Benötigt wurden  448 Millisekunden. Der Spieler benötigte dafür 1 Versuche. Aktuell 0 
+
+Die Frage: Frage5
+ wurde richtig beantwortet in einer Zeit von 0.0 Sekunden und der Spieler nutze dafür 1 Versuche
+
+Die Frage:Frage3
+ wurde mit: L
+beantwortet. Richtig wäre: I
+ gewesen. Benötigt wurden  215 Millisekunden. Der Spieler benötigte dafür 1 Versuche. Aktuell 1 
+
+Die Frage: Frage13
+ wurde richtig beantwortet in einer Zeit von 4.0 Sekunden und der Spieler nutze dafür 1 Versuche
+
+Die Frage:Frage7
+ wurde mit: BB
+beantwortet. Richtig wäre: DD
+ gewesen. Benötigt wurden  428 Millisekunden. Der Spieler benötigte dafür 1 Versuche. Aktuell 2 
+
+Die Frage: Frage20
+ wurde richtig beantwortet in einer Zeit von 0.0 Sekunden und der Spieler nutze dafür 1 Versuche
+
+Die Frage:Frage25
+ wurde mit: erggre
+beantwortet. Richtig wäre: grg
+ gewesen. Benötigt wurden  195 Millisekunden. Der Spieler benötigte dafür 1 Versuche. Aktuell 3 
+
+
+Die Frage:Frage26
+ wurde mit: ot
+beantwortet. Richtig wäre: o
+ gewesen. Benötigt wurden  173 Millisekunden. Der Spieler benötigte dafür 1 Versuche. Aktuell 3 
+
+
+Die Frage:Frage9
+ wurde mit: 789
+beantwortet. Richtig wäre: 123
+ gewesen. Benötigt wurden  285 Millisekunden. Der Spieler benötigte dafür 1 Versuche. Aktuell 3 
+
+
+Die Frage:Frage22
+ wurde mit: was soll dann richtig sein?
+beantwortet. Richtig wäre: ohja gehen sie
+ gewesen. Benötigt wurden  204 Millisekunden. Der Spieler benötigte dafür 1 Versuche. Aktuell 3 
+
+
+Die Frage:Frage1
+ wurde mit: B
+beantwortet. Richtig wäre: D
+ gewesen. Benötigt wurden  203 Millisekunden. Der Spieler benötigte dafür 1 Versuche. Aktuell 3 
+
+
+Die Frage:Frage4
+ wurde mit: N
+beantwortet. Richtig wäre: P
+ gewesen. Benötigt wurden  235 Millisekunden. Der Spieler benötigte dafür 1 Versuche. Aktuell 3 
+
+
+Die Frage:Frage17
+ wurde mit: S8
+beantwortet. Richtig wäre: S6
+ gewesen. Benötigt wurden  2508 Millisekunden. Der Spieler benötigte dafür 1 Versuche. Aktuell 3 
+
+
+Die Frage:Frage19
+ wurde mit: Paris
+beantwortet. Richtig wäre: Rom
+ gewesen. Benötigt wurden  180 Millisekunden. Der Spieler benötigte dafür 1 Versuche. Aktuell 3 
+
+Die Frage: Frage14
+ wurde richtig beantwortet in einer Zeit von 0.0 Sekunden und der Spieler nutze dafür 1 Versuche
+Die Frage: Frage12
+ wurde richtig beantwortet in einer Zeit von 0.0 Sekunden und der Spieler nutze dafür 1 Versuche
+Die Frage: Frage21
+ wurde richtig beantwortet in einer Zeit von 0.0 Sekunden und der Spieler nutze dafür 1 Versuche
+
+Die Frage:Frage18
+ wurde mit: H�lle
+beantwortet. Richtig wäre: Walhalla
+ gewesen. Benötigt wurden  176 Millisekunden. Der Spieler benötigte dafür 1 Versuche. Aktuell 6 
+
+Die Frage: Frage8
+ wurde richtig beantwortet in einer Zeit von 0.0 Sekunden und der Spieler nutze dafür 1 Versuche
