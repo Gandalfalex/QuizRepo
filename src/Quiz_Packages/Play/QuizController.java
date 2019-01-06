@@ -51,7 +51,7 @@ public class QuizController {
         
     public class Listener implements ActionListener{
             
-        @Override
+        @Override  //Overrides a given function
         public void actionPerformed(ActionEvent evt){
             if (evt.getActionCommand().equals(GUI_QuizSpielen.BUTTONWAIT)){     //wenn eine Frage übersprungen wurde               
                 work.decrementChances();                                        //Setze die Verbliebenen Chancen runter

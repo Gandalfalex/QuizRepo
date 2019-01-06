@@ -72,6 +72,8 @@ public class Setting_Controller {
         return i;
     }
 
+
+
     public int getAmountOfQuestions(String s){                                  //Anzahl der Fragen
         int i = 0;                                                               //selbes Prinzip wie drüber, max-Angabe ist später dran
         try{
