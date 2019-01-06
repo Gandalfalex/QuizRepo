@@ -13,10 +13,17 @@ public class Frage {
     private int chances;
     private int usedChances;
     private boolean used = false;
-   
-    
-   
-    
+
+
+    /**
+     * @param question
+     * @param answer1
+     * @param answer2
+     * @param answer3
+     * @param answer4
+     * @param correctAnswers
+     * @param chances
+     */
     public Frage(String question, String answer1, String answer2, String answer3, 
                                         String answer4, String correctAnswers, int chances){
         //Teste, ob die Elemente wirklich existieren, d.h. ob dort nutzbare Informationen drinnen sind
@@ -34,34 +41,69 @@ public class Frage {
         this.chances = chances;
         this.usedChances = chances-1;                                 //kopiere die Chancen, zweite kann bearbeitet werden
     }
-    
-    
-    
-    
 
 
+    /**
+     * Integer, amount of chances
+     * @return
+     */
     public int getChances(){return chances;}
+
+    /**
+     * Integer, amount of used chances
+     * @return
+     */
     public int getUsedChances(){return usedChances;}
-    
+
+    /**
+     * decreases the amount of chances
+     */
     public void decChances(){                                               //decrementiere die Chancen, wenn Frage übersprungen wurde
         if (getChances() >1)
               usedChances-=1;  
     }
+
+    /**
+     * remaining chances
+     * @return
+     */
     public int getActChances(){                                             //gibt die Anzahl der Versuche zurück
         return chances - usedChances;
     }
+
+    /**
+     * a Question should'nt be used two times
+     * @param b
+     */
     public void setUsed(boolean b){
         used = b;
     }
-    public String getQuestion(){return this.question;}
-    public String getCorrectAnswers(){return this.correctAnswers;}
+
+    /**
+     *
+     * @return
+     */
     public boolean getUsed(){
         return used;
     }
 
+    /**
+     * returns the question
+     * @return
+     */
+    public String getQuestion(){return this.question;}
+
+    /**
+     * returns the correct answer
+     * @return
+     */
+    public String getCorrectAnswers(){return this.correctAnswers;}
 
 
-
+    /**
+     * simply return all possible answers
+     * @return
+     */
     public List<String> getList(){
         List<String> kompletteFrage = new ArrayList<>();
             kompletteFrage.add(question);

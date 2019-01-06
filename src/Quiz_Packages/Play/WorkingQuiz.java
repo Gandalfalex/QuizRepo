@@ -43,13 +43,6 @@ public class WorkingQuiz extends Observable{
 
 
 
-
-
-
-
-
-
-
      public List<List<String>> createWorkingList (List<Integer> listOfQuestionNumbers) {
         if (allQuestionObjects.isEmpty()) throw new NullPointerException();                          //bekommt aus dem Fragenkatalog die Liste an FrageObjekten und erstellt daraus die genutzte verkettete Liste
         for (int i = 0; i < listOfQuestionNumbers.size(); i++) {                                     //Die Liste besitzt random zahlen aus den Fragen die genutzt werden sollen

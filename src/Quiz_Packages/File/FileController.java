@@ -10,8 +10,9 @@ import java.awt.event.ActionListener;
 import java.util.*;
 
 
-
-
+/**
+ * Controller Class of an MVC Model
+ */
 public class FileController {
     
     
@@ -30,25 +31,33 @@ public class FileController {
     private GUI_QuizSpielen play;
     private WorkingQuiz work;
     private Readtxt stats = new Readtxt(stat);
-    
-   
-    
-    
-    
-    
+
+
+    /**
+     * needs an instance of a graphical unit interface
+     * @param gui_Frage
+     */
     public FileController(GUI_Frage gui_Frage){
         if (gui_Frage == null) throw new NullPointerException();  //Fehlervermeidung durch Test ob dateien vorhanden oder leer
         this.gui_Frage = gui_Frage;                                //globale Variable speichern
         this.gui_Frage.addListener(new Listen());               //erstellt Eventlistener -> reagiert darauf, wenn Button gedrückt wird in GUI-Klasse
     }
-    
-    
-    
 
+
+    /**
+     * internal class which implements an actionListener
+     * Reacts on everything that happens on the GUI
+     */
     public class Listen implements ActionListener{  //interne klasse
         
       //if-else-Fragen  
         //wenn Button gedrückt wird, Abfrage welcher Button (welcher Zusatz) gedrückt wird und was er machen soll
+
+        /**
+         * based on the event, this function determines what to do next
+         * it will start the game, add a new question-object, moves to the setting-controller or finish the quiz
+         * @param evt
+         */
         @Override
         public void actionPerformed(ActionEvent evt){
             if (evt.getActionCommand().equals(GUI_Frage.START_GAME)){   //wenn Button gedrückt wird, wird Start Game ausgefürt
@@ -91,7 +100,10 @@ public class FileController {
     }
 
 
-
+    /**
+     * an already used question should'nt be used twice
+     * so it simply removes the question from the list
+     */
     public void deleteUsedQuestions(){
         for (int i = 0; i<objectList.size(); i++){                                              //for each loop
             if (objectList.get(i).getUsed()== true)                                             //wenn Frage genutzt, dann lösche diese
