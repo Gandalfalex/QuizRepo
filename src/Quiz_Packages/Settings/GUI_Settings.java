@@ -22,6 +22,7 @@ public class GUI_Settings extends javax.swing.JFrame {
 
     public GUI_Settings() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**

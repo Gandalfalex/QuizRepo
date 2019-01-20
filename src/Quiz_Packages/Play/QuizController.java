@@ -38,10 +38,11 @@ public class QuizController {
 
         if (work.getRemainingChances() >0){                                     //überspringen Button wird nur benötigt, wenn man überspringen kann
             play.enableButtonWait();                                    
-            play.SetButtonWaitText("Überspringen, es bleiben " + (work.getRemainingChances()+1) + " Versuche") ;
+            play.SetButtonWaitText("Frage überspringen, es bleiben " + (work.getRemainingChances()+1) + " Versuche") ;
         }
         else {
             play.disableButtonWait();
+              play.SetButtonWaitText("Frage darf nicht mehr übersprungen werden") ;
         }
     } 
      
@@ -75,12 +76,7 @@ public class QuizController {
                 nextQuestion();
             }
 
-        }
-        
-       
-        
-        
-        
+        }   
     }   
         
         
@@ -94,21 +90,21 @@ public class QuizController {
         
       
         
-        public void nextQuestion(){  
-            if (work.prepare() == true && work.allObjects.size() >0){                       //teste, ob noch genug Fragen im Vorrat sind, prepare bereitet alle neuen Daten vor
-                setTexts(work.setText());
-                play.setFinishedVisible();                                                  //setTexts hohlt sich dann die Informationen für die Buttons
-            }
-            else {  
-                String s = System.getProperty("user.dir") + "\\Stats.txt";                  //dort befindet sich die Stats datei
-                Readtxt stats = new Readtxt(s);
-                stats.addStats(work.printStats(), s);
-                play.disableButtons();                                                      //mache die Buttons unsichtbar, besseres Ende wird noch gesucht
-                play.disableButtonWait();
-                play.SetLableText("Spiel beendet mit " + work.getPoints() + " Punkten");
-                
-            }       
+    public void nextQuestion(){  
+        if (work.allObjects.size()>=1){                                  //teste, ob noch genug Fragen im Vorrat sind, prepare bereitet alle neuen Daten vor
+            work.calculateNextQuestion();
+            setTexts(work.setText());
+            play.setFinishedVisible();                                                  //setTexts hohlt sich dann die Informationen für die Buttons
         }
+        else { 
+            String s = System.getProperty("user.dir") + "\\Stats.txt";                  //dort befindet sich die Stats datei
+            Readtxt stats = new Readtxt(s);
+            stats.addStats(work.printStats(), s);
+            play.disableButtons();                                                      //mache die Buttons unsichtbar, besseres Ende wird noch gesuch
+            play.disableButtonWait();
+            play.SetLableText("Spiel beendet mit " + work.getPoints() + " Punkten");
+        }       
+    }
     
 
 

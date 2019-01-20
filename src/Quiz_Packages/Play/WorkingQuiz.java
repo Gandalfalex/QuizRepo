@@ -11,7 +11,7 @@ public class WorkingQuiz extends Observable{
     public List<List<String>> allObjects = new ArrayList<>();                                                          //gewünschte Liste, Nutzung gefordert, einfach durch FragenListe ersetzbar
     private List<Frage> allQuestionObjects;                                                                             //ÜbergabeListe aus dem FragenKatalog
     private List<Frage> questions = new ArrayList<>();                                                                  //Nutzbare Liste der Fragen
-    private int actuallQuestion = 0;
+    private int actualQuestion = 0;
     private List<GetStats> inputInformations = new ArrayList<>();
     private int points = 0;
     private int aOQ = 0;
@@ -31,16 +31,17 @@ public class WorkingQuiz extends Observable{
     }
     
     
-    public boolean prepare (){ 
-
-        if (allObjects.size() == 0) return false;
-        else {
+    public void calculateNextQuestion(){ 
+        if (allObjects.size()==1){
+            actualQuestion= 0;
+        }
+        else{
             Random rand = new Random();
-            actuallQuestion = rand.nextInt(allObjects.size());
-            return true;
+            int i =  (actualQuestion + rand.nextInt(allObjects.size()-1)+1) % allObjects.size();
+            actualQuestion = i;
         }
     }
-
+   
 
 
      public List<List<String>> createWorkingList (List<Integer> listOfQuestionNumbers) {
@@ -93,8 +94,8 @@ public class WorkingQuiz extends Observable{
 
 
     public boolean isCorrect(String a) {
-        if (a == null || a == "" && !allObjects.get(actuallQuestion).isEmpty()) throw new IllegalArgumentException();         //A muss Wert enthalten
-        if (allObjects.get(actuallQuestion).get(5).equals(a)){                  //bei einer Lösung: A muss gleich der Lösung sein
+        if (a == null || a == "" && !allObjects.get(actualQuestion).isEmpty()) throw new IllegalArgumentException();         //A muss Wert enthalten
+        if (allObjects.get(actualQuestion).get(5).equals(a)){                  //bei einer Lösung: A muss gleich der Lösung sein
             points +=1;
             return true;
         }
@@ -104,10 +105,12 @@ public class WorkingQuiz extends Observable{
 
     public boolean saveStats(String s, String givenAnswer, int time){
         loopThroughQuestions(s);        //entferne die Frage aus der Liste, um keine doppelten zu bekommen
-        if (allObjects.get(actuallQuestion).contains(s) && allObjects.size() > 0){    //dafür muss es die Frage enthalten und größer 0 sein, sonst null element
-            inputInformations.add(new GetStats(allObjects.get(actuallQuestion).get(0), allObjects.get(actuallQuestion).get(5), givenAnswer, time, questions.get(actuallQuestion).getActChances(), points));
-            allObjects.remove(actuallQuestion);         //löschen der gespielten Frage aus der Liste
-            questions.get(actuallQuestion).setUsed(true);   //setze Zustand der used-Variable dieser Frage auf true
+        if (allObjects.get(actualQuestion).contains(s) && allObjects.size() > 0){    //dafür muss es die Frage enthalten und größer 0 sein, sonst null element
+            inputInformations.add(new GetStats(allObjects.get(actualQuestion).get(0),
+                    allObjects.get(actualQuestion).get(5), 
+                    givenAnswer, time, questions.get(actualQuestion).getActChances(), points));
+            allObjects.remove(actualQuestion);         //löschen der gespielten Frage aus der Liste
+            questions.get(actualQuestion).setUsed(true);   //setze Zustand der used-Variable dieser Frage auf true
             return true;
         }
         return false;
@@ -120,8 +123,8 @@ public class WorkingQuiz extends Observable{
    
     
     public List<String> setText() {     //um texte der aktuell genutzten Frage zurückzugeben
-        if (allObjects.get(actuallQuestion).size() == 7)        //Liste an Strings an Quiz-Controller (entspricht getText?)
-            return allObjects.get(actuallQuestion);
+        if (allObjects.get(actualQuestion).size() == 7)        //Liste an Strings an Quiz-Controller (entspricht getText?)
+            return allObjects.get(actualQuestion);
         else return null;
     }
 
@@ -140,9 +143,9 @@ public class WorkingQuiz extends Observable{
 
 
 
-    public void decrementChances(){questions.get(actuallQuestion).decChances();}               //wurde eine Frage übersprungen, dann passe die genutzen Versuche in dem FragenObjekt an
+    public void decrementChances(){questions.get(actualQuestion).decChances();}               //wurde eine Frage übersprungen, dann passe die genutzen Versuche in dem FragenObjekt an
                                                                                                //Frage stellt diese Funktion selbst bereit
-    public int getRemainingChances(){return questions.get(actuallQuestion).getUsedChances();}  //zur Anzeige, wieviele Versuche man noch hat, bei dem letzten Versuch irrelevant
+    public int getRemainingChances(){return questions.get(actualQuestion).getUsedChances();}  //zur Anzeige, wieviele Versuche man noch hat, bei dem letzten Versuch irrelevant
 
     public int getAllObjectsSize(){                                                             //Rückgabe, wie viele Fragen noch vorhanden sind
         return allObjects.size();
@@ -156,7 +159,5 @@ public class WorkingQuiz extends Observable{
         return inputInformations;            //return Liste mit Stats    
     }                                      //Ausgabe für die Statistik
     
-    
-    
-    
+      
 }

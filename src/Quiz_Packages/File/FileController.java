@@ -35,7 +35,7 @@ public class FileController {
 
     /**
      * needs an instance of a graphical unit interface
-     * @param gui_Frage
+     * @param
      */
     public FileController(GUI_Frage gui_Frage){
         if (gui_Frage == null) throw new NullPointerException();  //Fehlervermeidung durch Test ob dateien vorhanden oder leer
@@ -133,7 +133,7 @@ public class FileController {
             }
 
 
-            work.prepare();                                                                         //bereite die ModellKlasse vor
+            work.calculateNextQuestion();                                                                         //bereite die ModellKlasse vor
             play = new GUI_QuizSpielen();                                                           //erstelle GUI Element
             play.addListener(new Listen());                                                         //füge einen Listener hier für die play-Instanz ein, da hier die Stats gehandelt werden
             new QuizController(play, work);                                                         //erstelle den Controller, benötigt beide Objekte, Objekte kennen sich selber nicht

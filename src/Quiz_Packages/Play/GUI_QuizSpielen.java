@@ -1,6 +1,8 @@
 package Quiz_Packages.Play;
 
 import java.awt.event.ActionListener;
+import java.util.HashSet;
+import java.util.Set;
 
 
 
@@ -18,6 +20,7 @@ public class GUI_QuizSpielen extends javax.swing.JFrame {
     
     public GUI_QuizSpielen() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -36,23 +39,26 @@ public class GUI_QuizSpielen extends javax.swing.JFrame {
         buttonC = new javax.swing.JButton();
         buttonWait = new javax.swing.JButton();
         finished = new javax.swing.JButton();
+        filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 0), new java.awt.Dimension(20, 32767));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(604, 494));
         setResizable(false);
+
         labelFrage.setText("jLabel1");
         buttonA.setText("A");
-        buttonA.setActionCommand(GUI_QuizSpielen.BUTTONA);
+        buttonA.setActionCommand(Quiz_Packages.Play.GUI_QuizSpielen.BUTTONA);
 
         buttonB.setText("B");
-        buttonB.setActionCommand(GUI_QuizSpielen.BUTTONB);
+        buttonB.setActionCommand(Quiz_Packages.Play.GUI_QuizSpielen.BUTTONB);
 
         buttonC.setText("C");
-        buttonC.setActionCommand(GUI_QuizSpielen.BUTTONC);
+        buttonC.setActionCommand(Quiz_Packages.Play.GUI_QuizSpielen.BUTTONC);
 
         buttonD.setText("D");
-        buttonD.setActionCommand(GUI_QuizSpielen.BUTTOND);
+        buttonD.setActionCommand(Quiz_Packages.Play.GUI_QuizSpielen.BUTTOND);
 
-        buttonWait.setActionCommand(GUI_QuizSpielen.BUTTONWAIT);
+        buttonWait.setActionCommand(Quiz_Packages.Play.GUI_QuizSpielen.BUTTONWAIT);
         buttonWait.setVisible(false);
         buttonWait.setText("Sie können diese Frage überspringen");
 
@@ -64,45 +70,48 @@ public class GUI_QuizSpielen extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(83, 83, 83)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(labelFrage)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(buttonA, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(buttonC, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(86, 86, 86)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(buttonD, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(buttonB, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(buttonWait, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(finished, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(76, 76, 76))
+                .addGap(54, 54, 54)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(filler1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(labelFrage)
+                        .addComponent(buttonWait, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(buttonC, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(buttonA, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(32, 32, 32)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(buttonB, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(buttonD, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(finished, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGap(54, 54, 54))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(59, 59, 59)
+                .addGap(28, 28, 28)
                 .addComponent(labelFrage)
                 .addGap(39, 39, 39)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(buttonB, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(buttonB, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(buttonA, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(56, 56, 56)
+                .addGap(52, 52, 52)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(buttonC, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(buttonD, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(35, 35, 35)
+                    .addComponent(buttonC, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(buttonD, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
                 .addComponent(buttonWait, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(36, 36, 36)
                 .addComponent(finished, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(45, 45, 45))
+                .addGap(70, 70, 70)
+                .addComponent(filler1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton buttonA;
@@ -110,6 +119,7 @@ public class GUI_QuizSpielen extends javax.swing.JFrame {
     private javax.swing.JButton buttonC;
     private javax.swing.JButton buttonD;
     private javax.swing.JButton buttonWait;
+    private javax.swing.Box.Filler filler1;
     private javax.swing.JButton finished;
     private javax.swing.JLabel labelFrage;
     // End of variables declaration//GEN-END:variables
@@ -124,13 +134,21 @@ public class GUI_QuizSpielen extends javax.swing.JFrame {
     public void SetButtonsDText(String s){buttonD.setText(s);}
     public void SetLableText(String s){labelFrage.setText(s);}
     public void SetButtonWaitText(String s){buttonWait.setText(s);}
-    public void enableButtonWait(){buttonWait.setVisible(true);}
-    public void disableButtonWait(){buttonWait.setVisible(false);}
+    public void enableButtonWait(){
+        buttonWait.setVisible(true);
+        buttonWait.setEnabled(true);    
+    }
+    public void disableButtonWait(){
+        //buttonWait.setVisible(false);
+        buttonWait.setEnabled(false);
+    }
     public void disableButtons(){
-        buttonA.hide();
-        buttonB.hide();
-        buttonC.hide();
-        buttonD.hide();
+        buttonA.setVisible(false);
+        buttonB.setVisible(false);
+        buttonC.setVisible(false);
+        buttonD.setVisible(false);
+        buttonWait.setVisible(false);
+        
     }
     public void setFinishedVisible(){finished.setVisible(true);}
     public String getButtonsAText(){return buttonA.getText();}

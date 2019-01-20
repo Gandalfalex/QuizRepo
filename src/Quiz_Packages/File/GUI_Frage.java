@@ -22,6 +22,7 @@ public class GUI_Frage extends javax.swing.JFrame {
     
     public GUI_Frage() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
