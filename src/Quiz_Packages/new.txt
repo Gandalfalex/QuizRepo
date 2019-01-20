@@ -1,10 +1,10 @@
-Frage1
-A
-B
-C
-D
-D
-3
+Frage1: Hier steht die Fragestellung.
+A: Hier steht Anwort A.
+B: Hier B.
+C: Hier dann C.
+D: Und hier D.
+D: Hier steht die richtige Antwort, ausgeschriebrn.
+3 - Anzahl an Chancen.
 Frage2
 E
 F
