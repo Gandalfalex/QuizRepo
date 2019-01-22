@@ -12,7 +12,6 @@ import java.util.Set;
 public class Setting_Controller {
     
     private GUI_Settings setting;
-    private String newFilePath ="";
     private Settings settings = Settings.getInstance();
 
 
@@ -29,7 +28,7 @@ public class Setting_Controller {
         public void actionPerformed(ActionEvent evt) {
 
             if ((evt.getActionCommand().equals(GUI_Settings.NEWQUIZ))){
-                newFilePath = fileChoose();
+                String newFilePath = fileChoose();
                 settings.setOverwrittenFilePath(newFilePath);
                 setting.setQuizName(newFilePath);
 
@@ -53,13 +52,13 @@ public class Setting_Controller {
         JFileChooser fileChooser = new JFileChooser();                          //Suche SpeicherPfad für neue Datei, erstelle FileChooser
         int returnVal = fileChooser.showOpenDialog(null);
         String filePath = "";
-        if (returnVal == fileChooser.APPROVE_OPTION) {
+        if (returnVal == JFileChooser.APPROVE_OPTION) {
             File file = fileChooser.getSelectedFile();
             try {
                 filePath = file.getAbsolutePath();              
             }
             catch (Exception e) {
-                System.out.println(e);
+                System.out.println("new filePath cant get detected");
             }
         } else {
             System.out.println("Abbruch durch User");

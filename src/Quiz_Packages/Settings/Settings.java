@@ -51,7 +51,7 @@ public class Settings {
             i = Integer.parseInt(s);                                            //Versuche aus dem String ein int zu machen
         }
         catch(Exception e){}
-        if (s=="" || i == 0) return 0;
+        if (s.equals("") || i == 0) return 0;
         if (i > 3)   return 3;                                                             //muss in den Grenzen sein, max 3 Chance
         else if (i < 1) return 1;
         return i;

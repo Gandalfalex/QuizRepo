@@ -10,7 +10,6 @@ import java.util.*;
 public class FragenKatalog {
 
     private ArrayList<Frage> listOfAllQuestions = new ArrayList<>();
-    private ArrayList<Frage> singleQuiz = new ArrayList<>();
     private static FragenKatalog fragenKatalog = null;
 
     /**
@@ -54,7 +53,6 @@ public class FragenKatalog {
      */
     protected void addQuestion(Frage frage){                                                // Add new Questions to a list of object
         listOfAllQuestions.add(frage);
-        singleQuiz = listOfAllQuestions;
     }
 
 
@@ -74,10 +72,10 @@ public class FragenKatalog {
             } else {
 
                 try {
-                    String t[] = file.get(i + 6).split("");
+                    String[] t = file.get(i + 6).split("");
                     chances = Integer.parseInt(t[0]);
                 } catch (Exception e) {
-                    System.out.println(e);
+                    System.out.println("cant parse string");
                 }
             }
             listOfAllQuestions.add(new Frage(file.get(i), file.get(i + 1),         //füge es als neue Frsge hinzu

@@ -6,7 +6,10 @@ import Quiz_Packages.File.FragenKatalog;
 import java.util.*;
 
 
-public class WorkingQuiz extends Observable{
+/**
+ * the LogicClass of the PlayMVC
+ */
+public class WorkingQuiz {
     
 
                                                                  //Nutzbare Liste der Fragen
@@ -14,20 +17,24 @@ public class WorkingQuiz extends Observable{
     private List<GetStats> inputInformations = new ArrayList<>();
     private int points = 0;
     private FragenKatalog fragenKatalog = FragenKatalog.getInstance();
-    private ArrayList<Frage> questions = new ArrayList<>();
+    private ArrayList<Frage> questions;
     private Frage frage = null;
-    private int limit = 0;
-   
-    
-    
-    //Konstruktor
+    private int limit;
+
+
+    /**
+     * The Quiz Constructor
+     * @param amountOfQuestions amount of Questions used in each round
+     */
     public WorkingQuiz(int amountOfQuestions) {
         questions = fragenKatalog.getQuestions(amountOfQuestions);
         limit = amountOfQuestions;
         System.out.println(questions.size());
     }
-    
-    
+
+    /**
+     * Creates a Multiplicative group using size of remaining Questions
+     */
     public void calculateNextQuestion(){
 
          if(questions.isEmpty()){
@@ -39,39 +46,44 @@ public class WorkingQuiz extends Observable{
         }
         else {
             Random rand = new Random();
-            int i =  (actualQuestion + rand.nextInt(questions.size()-1)+1) % questions.size();
-            actualQuestion = i;
+
+            actualQuestion =(actualQuestion + rand.nextInt(questions.size()-1)+1) % questions.size();
             frage = questions.get(actualQuestion);
         }
 
     }
-   
 
 
-    public List<String> mixAnswers(List<String> q){
+    /**
+     * Shuffles the Answers and returns the result
+     * @param temp List of all Strings
+     * @return Strings in random order
+     */
+    public List<String> mixAnswers(List<String> temp){
         List<Integer> zahl = new ArrayList<>();
-        List<String> t = q;
+        List<String> oldInformations = temp;
         Random rand = new Random();
         while (zahl.size() < 4) {                                                  //r steht für die Anzahl an Fragen, bekommt man aus der Settings-Klasse
             int i = rand.nextInt(4)+1;                                            //neue Random Zahl
             if (!zahl.contains(i))                                                 //Liste darf diese Zahl nicht enthalten
                 zahl.add(i);                                                           //dann wird sie geaddet
         }
-        q.set(1,t.get(zahl.get(0)));
-        q.set(2,t.get(zahl.get(1)));
-        q.set(3,t.get(zahl.get(2)));
-        q.set(4,t.get(zahl.get(3)));
-        return q;
+        temp.set(1,oldInformations.get(zahl.get(0)));
+        temp.set(2,oldInformations.get(zahl.get(1)));
+        temp.set(3,oldInformations.get(zahl.get(2)));
+        temp.set(4,oldInformations.get(zahl.get(3)));
+        return temp;
     }
 
 
-
-
-
-
-    public boolean isCorrect(String a) {
-        if (a == null || a == "" && !questions.isEmpty()) throw new IllegalArgumentException();         //A muss Wert enthalten
-        if (questions.get(actualQuestion).getCorrectAnswers().equals(a)){                  //bei einer Lösung: A muss gleich der Lösung sein
+    /**
+     *
+     * @param answer given Answer
+     * @return returns true, if the answer is correct
+     */
+    public boolean isCorrect(String answer) {
+        if (answer == null || answer.equals("") && !questions.isEmpty()) throw new IllegalArgumentException();         //A muss Wert enthalten
+        if (questions.get(actualQuestion).getCorrectAnswers().equals(answer)){                  //bei einer Lösung: A muss gleich der Lösung sein
             points +=1;
             return true;
         }
@@ -79,12 +91,11 @@ public class WorkingQuiz extends Observable{
     }
 
 
-    public boolean saveStats(String givenAnswer, int time){
+    public void saveStats(String givenAnswer, int time){
        inputInformations.add(
                new GetStats(frage.getQuestion(), frage.getCorrectAnswers(), givenAnswer, time, frage.getUsedChances(), points));
 
         questions.remove(actualQuestion);         //löschen der gespielten Frage aus der Liste
-        return true;
     }       
 
 

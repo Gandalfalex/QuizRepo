@@ -32,7 +32,7 @@ public class FileController {
 
     /**
      * needs an instance of a graphical unit interface
-     * @param
+     * @param gui_Frage is an instance of the JFrame
      */
     public FileController(GUI_Frage gui_Frage){
         if (gui_Frage == null) throw new NullPointerException();  //Fehlervermeidung durch Test ob dateien vorhanden oder leer
@@ -55,12 +55,12 @@ public class FileController {
         /**
          * based on the event, this function determines what to do next
          * it will start the game, add a new question-object, moves to the setting-controller or finish the quiz
-         * @param evt
+         * @param evt as some ActionEvent, like clicking a button
          */
         @Override
         public void actionPerformed(ActionEvent evt){
             if (evt.getActionCommand().equals(GUI_Frage.START_GAME)){   //wenn Button gedrückt wird, wird Start Game ausgefürt
-                prepareSecondGUI();
+                prepareQuiz();
             }
             else if (evt.getActionCommand().equals(GUI_Frage.NEW_QUESTION)){                     //neue Frage hinzufügen
                 manageAddQuestion();
@@ -73,7 +73,7 @@ public class FileController {
             }
             else if (evt.getActionCommand().equals(GUI_Settings.FINISHED)){
 
-                if (settings.getOverwrittenFilePath() != "") {
+                if (settings.getOverwrittenFilePath().equals("")) {
                   //  settings.setOverwrittenFilePath(path);                                                 //Übernehme den Pfad der neuen Datei, sofern möglich
                     settings.setAmountOfQuestions(setting.getAmountOfQuestions());
                     settings.setChances(setting.getAmountOfChances());
@@ -89,8 +89,9 @@ public class FileController {
                         Runtime.getRuntime().exec("notepad.exe \"" + stat);         //öffne Texteditor mit der Datei
                     } 
                     catch (Exception e) {
-                        System.out.println(e);
+                        System.out.println("konnte Notepad nicht öffnen");
                     }
+
                     if(work.getAllObjectsSize() == 0){                                         //nur wenn Quiz durchespielt ist
                                                                                                         //suche alle genutzten Fragen raus, lösche diese
                         gui_Frage.setVisible(true);                                             //sichtbarkeit anpassen
@@ -102,9 +103,11 @@ public class FileController {
     }
 
 
-
-
-    private void prepareSecondGUI(){
+    /**
+     * this functions prepares the second mvc
+     * it creates a list of Questions, creates a new Controller, JFrame, and Model and set's up the listeners
+     */
+    private void prepareQuiz(){
         System.out.println(settings.getOverwrittenFilePath());
         if (fragenKatalog.getSizeUsedQuestions()==0) {
             fragenKatalog.createQuestionList(workWithFiles.readFile(settings.getOverwrittenFilePath()), settings.getChances());
@@ -123,8 +126,9 @@ public class FileController {
     }
 
 
-
-
+    /**
+     * validates the Question and checks the inputs
+     */
     private void manageAddQuestion(){
 
         if(getInputs().isEmpty() || !validInput(getInputs()))
@@ -148,8 +152,10 @@ public class FileController {
     }
 
 
-
-    
+    /**
+     *
+     * @return ArrayList</String> that contains all informations
+     */
     private ArrayList<String> getInputs(){
         ArrayList<String> input = new ArrayList<>();                                 //erstelle eine neue Liste, inder die Texte eingefügt werden
                                                                                 //aber nur, wenn die eingabe nicht leer ist
@@ -166,7 +172,11 @@ public class FileController {
         return new ArrayList<>();                                                              //wenn nicht lesbar für Programm, emptyList = leere Liste, wird vom Programm abgefangen
     }
 
-
+    /**
+     *
+     * @param temp List of Inputs
+     * @return true, if there is an correct answer
+     */
     private boolean validInput(List<String> temp){
         List<String> inputs = temp;                                                 //Liste kopieren um Datenverlust aus globaler Variable zu vermeiden
         String correct = inputs.get(5);                                         //hohle die richtige Antwort, speichere
@@ -180,19 +190,24 @@ public class FileController {
                     a += 1;
                 }
             }
-            if (a <= 1) return true;                                            //darf nur einmal vorhanden sein (nur einmal richtige ANtwort erlaubt)
+            //darf nur einmal vorhanden sein (nur einmal richtige ANtwort erlaubt)
+            return a <= 1;
         }            
         return false;                                                           //sonst return false, Frage nicht gespeichert
     }
 
-
+    /**
+     *
+     * @param s should be an integer
+     * @return integer, converts the String to an int or returns 1
+     */
     private int getStringToInt(String s){
         int value = 1;
         try{
             value = Integer.parseInt(s)%4;
         }
         catch (Exception e){
-            System.out.println(e);
+            System.out.println("cant convert anything");
         }
         System.out.println(value);
         if (value==0){

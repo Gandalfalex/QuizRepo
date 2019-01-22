@@ -21,7 +21,7 @@ public class GetStats {
                 correct == null ||
                 answer == null ||
                 t == 0) throw new NullPointerException();
-        if (question == "" || correct == "" || answer == "") throw new IllegalArgumentException();
+        if (question.equals("") || correct.equals("") || answer.equals("")) throw new IllegalArgumentException();
         this.question = question;
         this.correct = correct;
         this.time = t;
