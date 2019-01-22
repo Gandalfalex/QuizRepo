@@ -22,20 +22,30 @@ import java.util.*;
 
 
 public class Readtxt {
-    private String fileName;
-    private List<String> fragenListe = new ArrayList<>();
+    private String fileName = System.getProperty("user.dir") + "\\src\\Quiz_Packages\\new.txt";
     private FileWriter writer;
     private File file;
-    
-    
-    public Readtxt(String fileName){
-       if (fileName == null)  throw new NullPointerException();
-       if (fileName == "" || !fileName.contains(".txt")) throw new IllegalArgumentException();
-       this.fileName = fileName;
-       
+    private static Readtxt readFiles = null;
+
+
+    private Readtxt(){}
+
+    public static Readtxt getInstance(){
+        if (readFiles == null){
+            readFiles = new Readtxt();
+        }
+        return readFiles;
     }
 
-
+    public void setFileName(String fileName){
+        if (fileName == null) {
+            throw new NullPointerException();
+        }
+        if (fileName == "" || !fileName.contains(".txt")) {
+            throw new IllegalArgumentException();
+        }
+        this.fileName = fileName;
+    }
 
     
     public void addNewQuestion(List<String> frage)  {
@@ -63,7 +73,7 @@ public class Readtxt {
         } catch (Exception e) {}
 
         if (s.isEmpty()) throw new NullPointerException();
-        file = new File(fileName);
+        file = new File(stat);
         try{
             writer = new FileWriter(file, true);
             for (int i = 0; i<s.size(); i++) {
@@ -84,14 +94,15 @@ public class Readtxt {
 
 
   
-    public List<String> readFile() {                                    //lesen aus einer Datei, rückgabe als Liste String
+    public ArrayList<String> readFile(String filePath) {                                    //lesen aus einer Datei, rückgabe als Liste String
 
+        ArrayList<String> temp = new ArrayList<>();
         FileReader fr = null;
         BufferedReader br = null;
 
         try
         {
-            File file = new File(fileName) ;
+            File file = new File(filePath) ;
             fr = new FileReader(file);
             br = new BufferedReader(fr) ;
 
@@ -100,7 +111,7 @@ public class Readtxt {
             String sep = System.getProperty("line.separator");
 
             while( (line=br.readLine()) != null )
-                fragenListe.add(line+sep) ;
+                temp.add(line+sep) ;
         }
         catch(IOException ex) {
             System.out.println(ex);
@@ -113,7 +124,7 @@ public class Readtxt {
             catch(Exception ex) {}
         }
         
-    return fragenListe;    
+    return temp;
     }
     
     

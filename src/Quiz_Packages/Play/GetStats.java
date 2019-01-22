@@ -16,8 +16,11 @@ public class GetStats {
     
     
     
-    public GetStats(String question, String correct, String answer, int t, int c, int p){        
-        if (question == null || correct == null || answer == null || t == 0|| c == 0) throw new NullPointerException();
+    public GetStats(String question, String correct, String answer, int t, int c, int p){
+        if (question == null ||
+                correct == null ||
+                answer == null ||
+                t == 0) throw new NullPointerException();
         if (question == "" || correct == "" || answer == "") throw new IllegalArgumentException();
         this.question = question;
         this.correct = correct;

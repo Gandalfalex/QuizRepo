@@ -2,17 +2,25 @@
 Die Frage:Frage2
  wurde mit: G
 beantwortet. Richtig wäre: F
- gewesen. Benötigt wurden  4238 Millisekunden. Der Spieler benötigte dafür 3 Versuche. Aktuell 0 
+ gewesen. Benötigt wurden  1168 Millisekunden. Der Spieler benötigte dafür 2 Versuche. Aktuell 0 
+
+Die Frage: Frage20
+ wurde richtig beantwortet in einer Zeit von 0.0 Sekunden und der Spieler nutze dafür 1 Versuche
+
+Die Frage:Frage12
+ wurde mit: lotR
+beantwortet. Richtig wäre: Herr der Ringe
+ gewesen. Benötigt wurden  176 Millisekunden. Der Spieler benötigte dafür 2 Versuche. Aktuell 1 
 
 
-Die Frage:Frage1
- wurde mit: C
-beantwortet. Richtig wäre: D
- gewesen. Benötigt wurden  159 Millisekunden. Der Spieler benötigte dafür 3 Versuche. Aktuell 0 
+Die Frage:Frage21
+ wurde mit: uhu
+beantwortet. Richtig wäre: huhu
+ gewesen. Benötigt wurden  174 Millisekunden. Der Spieler benötigte dafür 0 Versuche. Aktuell 1 
 
 
-Die Frage:Frage3
- wurde mit: L
-beantwortet. Richtig wäre: I
- gewesen. Benötigt wurden  167 Millisekunden. Der Spieler benötigte dafür 3 Versuche. Aktuell 0 
+Die Frage:Frage17
+ wurde mit: S9
+beantwortet. Richtig wäre: S6
+ gewesen. Benötigt wurden  152 Millisekunden. Der Spieler benötigte dafür 0 Versuche. Aktuell 1 
 

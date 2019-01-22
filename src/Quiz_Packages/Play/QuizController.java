@@ -42,7 +42,7 @@ public class QuizController {
         }
         else {
             play.disableButtonWait();
-              play.SetButtonWaitText("Frage darf nicht mehr übersprungen werden") ;
+            play.SetButtonWaitText("Frage darf nicht mehr übersprungen werden") ;
         }
     } 
      
@@ -58,21 +58,25 @@ public class QuizController {
                 work.decrementChances();                                        //Setze die Verbliebenen Chancen runter
                 System.out.print(" Frage wurde übersprungen, es bleiben noch " + work.getRemainingChances() + " über \n");
                 nextQuestion();                                                 //rufe die nöchste Frage auf
-            } else if (evt.getActionCommand().equals(GUI_QuizSpielen.BUTTONA)) {
+            }
+            else if (evt.getActionCommand().equals(GUI_QuizSpielen.BUTTONA)) {
                 work.isCorrect(play.getButtonsAText());
-                work.saveStats(play.getLabel(), play.getButtonsAText(), getTime());     //entferne die Frage
+                work.saveStats(play.getButtonsAText(), getTime());     //entferne die Frage
                 nextQuestion();
-            } else if (evt.getActionCommand().equals(GUI_QuizSpielen.BUTTONB)) {
+            }
+            else if (evt.getActionCommand().equals(GUI_QuizSpielen.BUTTONB)) {
                 work.isCorrect(play.getButtonsBText());
-                work.saveStats(play.getLabel(), play.getButtonsBText(), getTime());     //entferne die Frage
+                work.saveStats(play.getButtonsBText(), getTime());     //entferne die Frage
                 nextQuestion();
-            } else if (evt.getActionCommand().equals(GUI_QuizSpielen.BUTTONC)) {
+            }
+            else if (evt.getActionCommand().equals(GUI_QuizSpielen.BUTTONC)) {
                 work.isCorrect(play.getButtonsCText());
-                work.saveStats(play.getLabel(), play.getButtonsCText(), getTime());     //entferne die Frage
+                work.saveStats(play.getButtonsCText(), getTime());     //entferne die Frage
                 nextQuestion();
-            } else if (evt.getActionCommand().equals(GUI_QuizSpielen.BUTTOND)) {
+            }
+            else if (evt.getActionCommand().equals(GUI_QuizSpielen.BUTTOND)) {
                 work.isCorrect(play.getButtonsDText());
-                work.saveStats(play.getLabel(), play.getButtonsDText(), getTime());     //entferne die Frage
+                work.saveStats(play.getButtonsDText(), getTime());     //entferne die Frage
                 nextQuestion();
             }
 
@@ -91,14 +95,14 @@ public class QuizController {
       
         
     public void nextQuestion(){  
-        if (work.allObjects.size()>=1){                                  //teste, ob noch genug Fragen im Vorrat sind, prepare bereitet alle neuen Daten vor
+        if (work.getAllObjectsSize()>=1){                                  //teste, ob noch genug Fragen im Vorrat sind, prepare bereitet alle neuen Daten vor
             work.calculateNextQuestion();
             setTexts(work.setText());
             play.setFinishedVisible();                                                  //setTexts hohlt sich dann die Informationen für die Buttons
         }
         else { 
             String s = System.getProperty("user.dir") + "\\Stats.txt";                  //dort befindet sich die Stats datei
-            Readtxt stats = new Readtxt(s);
+            Readtxt stats = Readtxt.getInstance();
             stats.addStats(work.printStats(), s);
             play.disableButtons();                                                      //mache die Buttons unsichtbar, besseres Ende wird noch gesuch
             play.disableButtonWait();

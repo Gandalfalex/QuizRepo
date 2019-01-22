@@ -1,6 +1,7 @@
 package Quiz_Packages.Play;
 
 import Quiz_Packages.File.Frage;
+import Quiz_Packages.File.FragenKatalog;
 
 import java.util.*;
 
@@ -8,68 +9,43 @@ import java.util.*;
 public class WorkingQuiz extends Observable{
     
 
-    public List<List<String>> allObjects = new ArrayList<>();                                                          //gewünschte Liste, Nutzung gefordert, einfach durch FragenListe ersetzbar
-    private List<Frage> allQuestionObjects;                                                                             //ÜbergabeListe aus dem FragenKatalog
-    private List<Frage> questions = new ArrayList<>();                                                                  //Nutzbare Liste der Fragen
+                                                                 //Nutzbare Liste der Fragen
     private int actualQuestion = 0;
     private List<GetStats> inputInformations = new ArrayList<>();
     private int points = 0;
-    private int aOQ = 0;
+    private FragenKatalog fragenKatalog = FragenKatalog.getInstance();
+    private ArrayList<Frage> questions = new ArrayList<>();
+    private Frage frage = null;
+    private int limit = 0;
    
     
     
     //Konstruktor
-    public WorkingQuiz(List<Frage> allQuestionObjects, int amountOfQuestions) {
-        if (allQuestionObjects.isEmpty()) throw new NullPointerException();
-        this.allQuestionObjects = allQuestionObjects;
-        if (amountOfQuestions != 0 && amountOfQuestions < allQuestionObjects.size())                            //setze die Anzahl an Fragen auf ein sinnvolles/mögliches Level
-            this.aOQ = amountOfQuestions;
-        else this.aOQ = allQuestionObjects.size();
-        if (allObjects.isEmpty()){
-            createWorkingList(getRandomQuestion(allQuestionObjects.size(),aOQ));                                                         //bereite QuizSpielen vor, nur beim ersten mal relevant
-        }
+    public WorkingQuiz(int amountOfQuestions) {
+        questions = fragenKatalog.getQuestions(amountOfQuestions);
+        limit = amountOfQuestions;
+        System.out.println(questions.size());
     }
     
     
-    public void calculateNextQuestion(){ 
-        if (allObjects.size()==1){
+    public void calculateNextQuestion(){
+
+         if(questions.isEmpty()){
+            fragenKatalog.getQuestions(limit);
+        }
+        else if (questions.size()==1){
             actualQuestion= 0;
+            frage = questions.get(actualQuestion);
         }
-        else{
+        else {
             Random rand = new Random();
-            int i =  (actualQuestion + rand.nextInt(allObjects.size()-1)+1) % allObjects.size();
+            int i =  (actualQuestion + rand.nextInt(questions.size()-1)+1) % questions.size();
             actualQuestion = i;
+            frage = questions.get(actualQuestion);
         }
+
     }
    
-
-
-     public List<List<String>> createWorkingList (List<Integer> listOfQuestionNumbers) {
-        if (allQuestionObjects.isEmpty()) throw new NullPointerException();                          //bekommt aus dem Fragenkatalog die Liste an FrageObjekten und erstellt daraus die genutzte verkettete Liste
-        for (int i = 0; i < listOfQuestionNumbers.size(); i++) {                                     //Die Liste besitzt random zahlen aus den Fragen die genutzt werden sollen
-            allObjects.add(mixAnswers(allQuestionObjects.get(listOfQuestionNumbers.get(i)).getList()));          //hohle für jede Frage die Liste; mixAnswers: mischt A,B,C,D untereinander (A könnte D sein etc.)
-            questions.add(allQuestionObjects.get(listOfQuestionNumbers.get(i)));                     //kopiere jedes FragenObject, identische Liste, nur mehr Funktionen, für den Used-Status benötigt
-        }
-        return allObjects;
-    }
-
-
-
-
-
-
-
-    public List<Integer> getRandomQuestion(int range, int amount){
-        Random rand = new Random();                                             //bekomme eine zufällige Zahl im Bereich der ganzen Fragen
-        List<Integer> t = new ArrayList<>();                                    //erstelle neue Liste aus Zahlen, die für die Indizes der FragenListe stehen werden
-        while (t.size() < amount) {                                                  //r steht für die Anzahl an Fragen, bekommt man aus der Settings-Klasse
-            int i = rand.nextInt(range);                                            //neue Random Zahl
-            if (!t.contains(i))                                                 //Liste darf diese Zahl nicht enthalten
-            t.add(i);                                                           //dann wird sie geaddet
-        }
-        return t;       //return an createWorkingList (Liste|wartet auf den Callback (von getRandomQuestion)
-    }
-
 
 
     public List<String> mixAnswers(List<String> q){
@@ -94,8 +70,8 @@ public class WorkingQuiz extends Observable{
 
 
     public boolean isCorrect(String a) {
-        if (a == null || a == "" && !allObjects.get(actualQuestion).isEmpty()) throw new IllegalArgumentException();         //A muss Wert enthalten
-        if (allObjects.get(actualQuestion).get(5).equals(a)){                  //bei einer Lösung: A muss gleich der Lösung sein
+        if (a == null || a == "" && !questions.isEmpty()) throw new IllegalArgumentException();         //A muss Wert enthalten
+        if (questions.get(actualQuestion).getCorrectAnswers().equals(a)){                  //bei einer Lösung: A muss gleich der Lösung sein
             points +=1;
             return true;
         }
@@ -103,52 +79,26 @@ public class WorkingQuiz extends Observable{
     }
 
 
-    public boolean saveStats(String s, String givenAnswer, int time){
-        loopThroughQuestions(s);        //entferne die Frage aus der Liste, um keine doppelten zu bekommen
-        if (allObjects.get(actualQuestion).contains(s) && allObjects.size() > 0){    //dafür muss es die Frage enthalten und größer 0 sein, sonst null element
-            inputInformations.add(new GetStats(allObjects.get(actualQuestion).get(0),
-                    allObjects.get(actualQuestion).get(5), 
-                    givenAnswer, time, questions.get(actualQuestion).getActChances(), points));
-            allObjects.remove(actualQuestion);         //löschen der gespielten Frage aus der Liste
-            questions.get(actualQuestion).setUsed(true);   //setze Zustand der used-Variable dieser Frage auf true
-            return true;
-        }
-        return false;
+    public boolean saveStats(String givenAnswer, int time){
+       inputInformations.add(
+               new GetStats(frage.getQuestion(), frage.getCorrectAnswers(), givenAnswer, time, frage.getUsedChances(), points));
+
+        questions.remove(actualQuestion);         //löschen der gespielten Frage aus der Liste
+        return true;
     }       
-    
-    
-    
-    
-    
-   
-    
-    public List<String> setText() {     //um texte der aktuell genutzten Frage zurückzugeben
-        if (allObjects.get(actualQuestion).size() == 7)        //Liste an Strings an Quiz-Controller (entspricht getText?)
-            return allObjects.get(actualQuestion);
-        else return null;
+
+
+
+    public List<String> setText() {                                         //um texte der aktuell genutzten Frage zurückzugeben
+        return mixAnswers(frage.getList());
     }
 
-    public void loopThroughQuestions(String s){
-        for (Frage f : allQuestionObjects ){
-            if (f.getQuestion().equals(s)){
-               f.setUsed(true);
-               System.out.print(f.getQuestion());
-            }
-        }
-    }
-    public List<Frage> getAllQuestionObjects(){
-        return allQuestionObjects;
-    }
-
-
-
-
-    public void decrementChances(){questions.get(actualQuestion).decChances();}               //wurde eine Frage übersprungen, dann passe die genutzen Versuche in dem FragenObjekt an
+    public void decrementChances(){frage.decChances();}               //wurde eine Frage übersprungen, dann passe die genutzen Versuche in dem FragenObjekt an
                                                                                                //Frage stellt diese Funktion selbst bereit
-    public int getRemainingChances(){return questions.get(actualQuestion).getUsedChances();}  //zur Anzeige, wieviele Versuche man noch hat, bei dem letzten Versuch irrelevant
+    public int getRemainingChances(){return frage.getUsedChances();}  //zur Anzeige, wieviele Versuche man noch hat, bei dem letzten Versuch irrelevant
 
     public int getAllObjectsSize(){                                                             //Rückgabe, wie viele Fragen noch vorhanden sind
-        return allObjects.size();
+        return questions.size();
     }
     
     public int getPoints(){             
@@ -158,6 +108,4 @@ public class WorkingQuiz extends Observable{
     public List<GetStats> printStats(){     //Erstelle LIste aus Objekten, adde jedesmal Instanz von addStats hinzu, um im laufenden Spiel darauf zuzugreifen
         return inputInformations;            //return Liste mit Stats    
     }                                      //Ausgabe für die Statistik
-    
-      
 }

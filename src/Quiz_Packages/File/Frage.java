@@ -28,7 +28,14 @@ public class Frage {
                                         String answer4, String correctAnswers, int chances){
         //Teste, ob die Elemente wirklich existieren, d.h. ob dort nutzbare Informationen drinnen sind
         if (question == null || answer1 == null || answer2 == null|| answer3 == null || answer4 == null) throw new NullPointerException();
-        if (question == "" || answer1 == "" || answer2 == "" || answer3 == "" || answer4 == "" ||  correctAnswers == "" || chances < 0 || chances>3) {
+        if (question == "" ||
+                answer1 == "" ||
+                answer2 == "" ||
+                answer3 == "" ||
+                answer4 == "" ||
+                correctAnswers == "" ||
+                chances < 0 ||
+                chances>3) {
             throw new IllegalArgumentException();
         }                               
         
@@ -117,5 +124,8 @@ public class Frage {
 
     }
 
+    public void setChances(int chances){
+        this.chances= chances;
+    }
 
 }

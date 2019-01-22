@@ -8,18 +8,21 @@ import java.util.*;
  * it stores a list of all Questions and return the list if needed
  */
 public class FragenKatalog {
-    private String filePath;
-    private List<Frage> listOfQuestions = new ArrayList<>();
-    private Readtxt usedFile;
 
+    private ArrayList<Frage> listOfAllQuestions = new ArrayList<>();
+    private ArrayList<Frage> singleQuiz = new ArrayList<>();
+    private static FragenKatalog fragenKatalog = null;
 
     /**
      * The Constructor needs the filepath of the textfile
-     * @param filePath
      */
-    public FragenKatalog(String filePath){
-        this.filePath = filePath;
-        usedFile = new Readtxt(filePath);
+    private FragenKatalog(){ }
+
+    public static FragenKatalog getInstance(){
+        if (fragenKatalog == null) {
+            fragenKatalog = new FragenKatalog();
+        }
+        return fragenKatalog;
     }
 
     /**
@@ -27,14 +30,16 @@ public class FragenKatalog {
      * @param s
      * @return true, if valid, false if not
      */
-    public boolean validNewQuestion(String s) {
-        if (listOfQuestions.isEmpty()){
+    protected boolean validateNewQuestion(String s) {
+        if (listOfAllQuestions.isEmpty()){
             return false;
         }
         else {
-            for (int i = 0; i < listOfQuestions.size(); i++){
-                s = s + System.getProperty("line.separator");
-                if (s.equals(listOfQuestions.get(i).getQuestion())){
+            System.out.println(s);
+            s = s + System.getProperty("line.separator");
+            for (Frage frage: listOfAllQuestions){
+
+                if (frage.getQuestion().contains(s)){
                     System.out.print(" existiert schon");
                     return false;
                 }
@@ -47,35 +52,90 @@ public class FragenKatalog {
      * Adds the new question both to the list and the file, which is currently used
      * @param frage
      */
-    public void addQuestion(Frage frage){                                                // Add new Questions to a list of object
-        listOfQuestions.add(frage);
-        usedFile.addNewQuestion(frage.getList());
+    protected void addQuestion(Frage frage){                                                // Add new Questions to a list of object
+        listOfAllQuestions.add(frage);
+        singleQuiz = listOfAllQuestions;
     }
 
 
     /**
      * depended of the chosen settings, this function creates a list of QuestionObjects by reading from a file and adding specific or default chances to the objects
-     * @param readtxt
-     * @param limitChances
      * @return
      */
-    public List<Frage> getListQuestionObjects(Readtxt readtxt, int limitChances){
-        listOfQuestions.clear();
-        if (readtxt == null) throw new NullPointerException();
-        int limit = readtxt.readFile().size();
+    protected void createQuestionList(ArrayList<String> file, int chanceTotal){
+        listOfAllQuestions.clear();
+        if (file.isEmpty()) throw new NullPointerException();
+        int limit = file.size();
         for (int i = 0; i+7<=limit; i = i+7) {
-            int diff = 1;
-            List<String> t = readtxt.readFile();
-            if (limitChances == 0) {
-                if (t.get(i+6).contains("2")) diff = 2;                 //limit ist ein String, teste nur darauf
-                if (t.get(i+6).contains("3")) diff = 3;
-            } else diff = limitChances;
-            listOfQuestions.add( new Frage(t.get(i),t.get(i+1),         //füge es als neue Frsge hinzu
-                    t.get(i+2),t.get(i+3),t.get(i+4), t.get(i+5), diff));
+            int chances = 1;
+
+            if (chanceTotal <= 3 && chanceTotal >= 1) {
+                chances = chanceTotal;
+            } else {
+
+                try {
+                    String t[] = file.get(i + 6).split("");
+                    chances = Integer.parseInt(t[0]);
+                } catch (Exception e) {
+                    System.out.println(e);
+                }
+            }
+            listOfAllQuestions.add(new Frage(file.get(i), file.get(i + 1),         //füge es als neue Frsge hinzu
+                        file.get(i + 2), file.get(i + 3), file.get(i + 4), file.get(i + 5), chances));
+
         }
-        return listOfQuestions;
     }
-    
-   
-    
+
+
+    public ArrayList<Frage> getQuestions(int amount){
+
+        if (amount >= listOfAllQuestions.size() || amount <=0){
+            amount = listOfAllQuestions.size()-1;
+        }
+        ArrayList<Frage> temp = new ArrayList<>();
+        System.out.println(getSizeUsedQuestions());
+        if (amount>=getSizeUsedQuestions()) {
+            System.out.println("i should be here");
+            for (Frage frage : listOfAllQuestions) {
+                frage.setUsed(false);
+            }
+        }
+
+        if (amount < 3) {
+            return listOfAllQuestions;
+        }
+        else {
+            ArrayList<Frage> tempUnUsed = new ArrayList<>();
+            for (Frage frage: listOfAllQuestions){
+                if (!frage.getUsed()){
+                    tempUnUsed.add(frage);
+                }
+            }
+            while (temp.size() != amount) {
+                Random rand = new Random();
+                int randomQ = rand.nextInt(tempUnUsed.size());
+                if (!temp.contains(tempUnUsed.get(randomQ))) {
+                    temp.add(tempUnUsed.get(randomQ));
+                    tempUnUsed.get(randomQ).setUsed(true);
+                }
+            }
+        }
+
+
+        for (Frage frage: temp){
+            System.out.print(frage.getQuestion());
+        }
+        return temp;
+    }
+
+    protected int getSizeUsedQuestions(){
+        int amount = 0;
+        for (Frage frage: listOfAllQuestions){
+            if (!frage.getUsed()){
+                amount++;
+            }
+        }
+        return amount;
+    }
+
 }
