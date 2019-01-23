@@ -17,29 +17,30 @@ import java.util.*;
 public class FileController {
     
     
-    
-    private GUI_Frage gui_Frage;
-    private String path = System.getProperty("user.dir") + "\\src\\Quiz_Packages\\new.txt";                                            //StandartSpeicherpfad, wird sonst nachträglich verändert
-    private String stat = System.getProperty("user.dir") + "\\Stats.txt";
+    //Variablen der Klasse "FileController"
+    private GUI_Frage gui_Frage;																//neue Instanz gui_Frage der Klasse GUI_Frage
+    private String path = System.getProperty("user.dir") + "\\src\\Quiz_Packages\\new.txt";     //StandartSpeicherpfad für Fragenkatalog, wird sonst nachträglich verändert
+    private String stat = System.getProperty("user.dir") + "\\Stats.txt";						//neues String-Element für die Statistik + Speicherort
+	
+    private FragenKatalog fragenKatalog;                                                        //neue Instanz fragenkatalog der Klasse FragenKtalog -> WorkingQuiz benötigt die Liste, auch werden hier neue Fragen erstellt
+    private GUI_Settings setting = new GUI_Settings();                                          //Einstellungen anpassen (Speicherpfad, allgemeine Chancen und Anzahl der Fragen)
+    private Settings settings = Settings.getInstance();											// ? Was passiert hier?
+    private GUI_QuizSpielen play;																//Variable play vom Typ GUI_QuizSpielen?
+    private WorkingQuiz work;																	// -''-
+    private Readtxt workWithFiles;																// ?
 
-    private FragenKatalog fragenKatalog;                                                                                //WorkingQuiz benötigt die Liste, auch werden hier neue Fragen erstellt
-    private GUI_Settings setting = new GUI_Settings();                                                                  //Einstellungen anpassen (Speicherpfad, allgemeine Chancen und anzahl der Fragen
-    private Settings settings = Settings.getInstance();
-    private GUI_QuizSpielen play;
-    private WorkingQuiz work;
-    private Readtxt workWithFiles;
-
-
+	
+	//Konstruktor
     /**
-     * needs an instance of a graphical unit interface
-     * @param gui_Frage is an instance of the JFrame
+     * Der FileController benötigt eine Instanz einer grafischen Benutzeroberfläche (needs an instance of a graphical unit interface)
+     * @param gui_Frage (ist Instanz von JFrame) is an instance of the JFrame
      */
     public FileController(GUI_Frage gui_Frage){
-        if (gui_Frage == null) throw new NullPointerException();  //Fehlervermeidung durch Test ob dateien vorhanden oder leer
-        this.gui_Frage = gui_Frage;                                //globale Variable speichern
-        this.gui_Frage.addListener(new Listen());               //erstellt Eventlistener -> reagiert darauf, wenn Button gedrückt wird in GUI-Klasse
-        workWithFiles = Readtxt.getInstance();
-        fragenKatalog = FragenKatalog.getInstance();
+        if (gui_Frage == null) throw new NullPointerException();  		//Fehlervermeidung durch Test ob Dateien vorhanden oder leer (Nullpointerexception)
+        this.gui_Frage = gui_Frage;                               		//globale Variable speichern
+        this.gui_Frage.addListener(new Listen());               		//erstellt Eventlistener -> reagiert darauf, wenn Button gedrückt wird in GUI-Klasse
+        workWithFiles = Readtxt.getInstance();							//workWithFiles bezieht Infos aus Objekt von Readtxt
+        fragenKatalog = FragenKatalog.getInstance();					//fragenkatalog bekommt Infos aus Objekt von FragenKatalog
     }
 
 
