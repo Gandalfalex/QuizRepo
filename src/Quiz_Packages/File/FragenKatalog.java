@@ -9,14 +9,15 @@ import java.util.*;
  */
 public class FragenKatalog {
 
-    private ArrayList<Frage> listOfAllQuestions = new ArrayList<>();
+    private ArrayList<Frage> listOfAllQuestions = new ArrayList<>();		//als Datentyp der Array-Liste wird die Klasse Frage verwendet (ähnlich wie String für Zeichenketten verwendet wird)
     private static FragenKatalog fragenKatalog = null;
 
     /**
-     * The Constructor needs the filepath of the textfile
+     * The Constructor needs the filepath of the textfile -> Konstruktor ist doch aber leer?
      */
-    private FragenKatalog(){ }
+    private FragenKatalog(){ }							//privater(?) Default-Konstruktor
 
+	
     public static FragenKatalog getInstance(){
         if (fragenKatalog == null) {
             fragenKatalog = new FragenKatalog();
