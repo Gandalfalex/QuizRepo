@@ -10,7 +10,7 @@ import java.util.*;
 public class FragenKatalog {
 
     private ArrayList<Frage> listOfAllQuestions = new ArrayList<>();		//als Datentyp der Array-Liste wird die Klasse Frage verwendet (ähnlich wie String für Zeichenketten verwendet wird)
-    private static FragenKatalog fragenKatalog = null;
+    private static FragenKatalog fragenKatalog = null;						//statische Variable fragenkatalog
 
     /**
      * The Constructor needs the filepath of the textfile -> Konstruktor ist doch aber leer?
@@ -18,14 +18,17 @@ public class FragenKatalog {
     private FragenKatalog(){ }							//privater(?) Default-Konstruktor
 
 	
+	//Getter-Methode, die einen  neuen Fragenkatalog erstellt, falls keiner vorhanden ist, und ihn dann zurückgibt 
     public static FragenKatalog getInstance(){
         if (fragenKatalog == null) {
-            fragenKatalog = new FragenKatalog();
+            fragenKatalog = new FragenKatalog();		//erstellt neuen fragenkatalog als Instanz des default-Konstruktors FragenKatalog()
         }
         return fragenKatalog;
     }
 
     /**
+	 * überprüft ob eine neu hinzu zu fügende Frage schon vorhanden ist, indem ein übergebener String mit dem Fragenkatalog zeilenweise verglichen wird
+	 * Wenn der übergebene String bereits verwendet wird, dann wird dies angezeigt, falls nicht kann die Frage zum Katalog hinzugefügt werden. (true/false)
      * These function determines if a new question is viable by simply comparing the answer to all answers who are already part of the list
      * @param s
      * @return true, if valid, false if not
