@@ -52,7 +52,7 @@ public class Frage {
         this.usedChances = chances-1;                         //kopiere die Chancen, zweite kann bearbeitet werden
     }
 
-
+//alle Getter-Methoden
     /**
 	 * Getter-Methode für Anzahl der Chancen
      * Integer, amount of chances
@@ -71,15 +71,7 @@ public class Frage {
 		return usedChances;
 	}
 
-    /**
-	 * Setter-Methode um verwendete Chancen um 1 zu verringern (dekrementieren)
-     * decreases the amount of chances
-     */
-    public void decChances(){                                //decrementiere die Chancen, wenn Frage übersprungen wurde
-        if (getChances() >1)
-              usedChances-=1;  //statt "usedChances-=1" evtl. "usedChances=usedChances--"?
-    }
-
+    
     /**
 	 * Getter-Methode um verbleibende Chancen zu errechnen und zurückzugeben
      * remaining chances
@@ -89,14 +81,7 @@ public class Frage {
         return chances - usedChances;
     }
 
-    /**
-	 * Setter-Methode
-     * Vermeiden von Fragendopplungen (keine Frage soll 2mal benutzt werden)
-     * @param b
-     */
-    public void setUsed(boolean b){
-        used = b;								//übergebener Parameter wird als boolean in used gespeichert (wahr oder falsch gesetzt)
-    }
+
 
     /**
      * Getter-Methode um "used" zurückzugeben
@@ -141,6 +126,25 @@ public class Frage {
             kompletteFrage.add(String.valueOf(getChances()));
         return kompletteFrage;
 
+    }
+
+//alle Setter-Methoden
+	/**
+	 * Setter-Methode um verwendete Chancen um 1 zu verringern (dekrementieren)
+     * decreases the amount of chances
+     */
+    public void decChances(){                                //decrementiere die Chancen, wenn Frage übersprungen wurde
+        if (getChances() >1)
+              usedChances-=1;  //statt "usedChances-=1" evtl. "usedChances=usedChances--"?
+    }
+	
+	/**
+	 * Setter-Methode
+     * Vermeiden von Fragendopplungen (keine Frage soll 2mal benutzt werden)
+     * @param b
+     */
+    public void setUsed(boolean b){
+        used = b;								//übergebener Parameter wird als boolean in used gespeichert (wahr oder falsch gesetzt)
     }
 	
 	/**
