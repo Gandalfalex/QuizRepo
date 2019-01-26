@@ -1,26 +1,30 @@
 
-Die Frage:Frage11
- wurde mit: ^-^
-beantwortet. Richtig wäre: xP
- gewesen. Benötigt wurden  1608 Millisekunden. Der Spieler benötigte dafür 0 Versuche. Aktuell 0 
+Die Frage:Frage17
+ wurde mit: S8
+beantwortet. Richtig wäre: S6
+ gewesen. Benötigt wurden  4687 Millisekunden. Der Spieler benötigte dafür 0 Versuche. Aktuell 0 
 
 
 Die Frage:Frage15
  wurde mit: Loki
 beantwortet. Richtig wäre: Odin
- gewesen. Benötigt wurden  186 Millisekunden. Der Spieler benötigte dafür 1 Versuche. Aktuell 0 
-
-Die Frage: Frage5
- wurde richtig beantwortet in einer Zeit von 0.0 Sekunden und der Spieler nutze dafür 1 Versuche
-
-Die Frage:Frage16
- wurde mit: Martell
-beantwortet. Richtig wäre: Stark
- gewesen. Benötigt wurden  174 Millisekunden. Der Spieler benötigte dafür 0 Versuche. Aktuell 1 
+ gewesen. Benötigt wurden  160 Millisekunden. Der Spieler benötigte dafür 1 Versuche. Aktuell 0 
 
 
-Die Frage:Frage12
- wurde mit: lotR
-beantwortet. Richtig wäre: Herr der Ringe
- gewesen. Benötigt wurden  193 Millisekunden. Der Spieler benötigte dafür 2 Versuche. Aktuell 1 
+Die Frage:Frage18
+ wurde mit: H�lle
+beantwortet. Richtig wäre: Walhalla
+ gewesen. Benötigt wurden  182 Millisekunden. Der Spieler benötigte dafür 0 Versuche. Aktuell 0 
+
+
+Die Frage:Frage3
+ wurde mit: J
+beantwortet. Richtig wäre: I
+ gewesen. Benötigt wurden  166 Millisekunden. Der Spieler benötigte dafür 2 Versuche. Aktuell 0 
+
+
+Die Frage:Frage10
+ wurde mit: schon 10
+beantwortet. Richtig wäre: wow
+ gewesen. Benötigt wurden  167 Millisekunden. Der Spieler benötigte dafür 0 Versuche. Aktuell 0 
 

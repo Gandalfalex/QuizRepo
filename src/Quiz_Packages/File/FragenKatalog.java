@@ -13,12 +13,19 @@ public class FragenKatalog {
     private static FragenKatalog fragenKatalog = null;						//statische Variable fragenkatalog
 
     /**
-     * The Constructor needs the filepath of the textfile -> Konstruktor ist doch aber leer?
+     * privater Konstrucktor, somit kann keine Klasse eine eigene Instanz des Konstrucktors erstellen
+     * Andere Objekte können sich nur die eine existierende Instanz der Klasse über die "static getInstance()"-Methode hohlen
+     * Somit besitzt jedes Objekt, welches diese Klasse benötigt, immer die gleiche Instanz
+     *
+     * Umsetzung des Singleton-Patterns
      */
     private FragenKatalog(){ }							//privater(?) Default-Konstruktor
 
-	
-	//Getter-Methode, die einen  neuen Fragenkatalog erstellt, falls keiner vorhanden ist, und ihn dann zurückgibt 
+
+    /**
+     *
+     * @return instanze dieser Klasse, sofern nicht null, wenn null, erstelle neue Instanz
+     */
     public static FragenKatalog getInstance(){
         if (fragenKatalog == null) {
             fragenKatalog = new FragenKatalog();		//erstellt neuen fragenkatalog als Instanz des default-Konstruktors FragenKatalog()
@@ -30,19 +37,19 @@ public class FragenKatalog {
 	 * überprüft ob eine neu hinzu zu fügende Frage schon vorhanden ist, indem ein übergebener String mit dem Fragenkatalog zeilenweise verglichen wird
 	 * Wenn der übergebene String bereits verwendet wird, dann wird dies angezeigt, falls nicht kann die Frage zum Katalog hinzugefügt werden. (true/false)
      * These function determines if a new question is viable by simply comparing the answer to all answers who are already part of the list
-     * @param s
+     * @param question Frage, die hinzugefügt werden soll
      * @return true, if valid, false if not
      */
-    protected boolean validateNewQuestion(String s) {
+    protected boolean validateNewQuestion(String question) {
         if (listOfAllQuestions.isEmpty()){
             return false;
         }
         else {
-            System.out.println(s);
-            s = s + System.getProperty("line.separator");
+            System.out.println(question);
+            question = question + System.getProperty("line.separator");
             for (Frage frage: listOfAllQuestions){
 
-                if (frage.getQuestion().contains(s)){
+                if (frage.getQuestion().contains(question)){
                     System.out.print(" existiert schon");
                     return false;
                 }
@@ -53,7 +60,7 @@ public class FragenKatalog {
 
     /**
      * Adds the new question both to the list and the file, which is currently used
-     * @param frage
+     * @param frage Diese Frage soll zum Quiz hinzugefügt werden
      */
     protected void addQuestion(Frage frage){                                                // Add new Questions to a list of object
         listOfAllQuestions.add(frage);
@@ -61,8 +68,9 @@ public class FragenKatalog {
 
 
     /**
-     * depended of the chosen settings, this function creates a list of QuestionObjects by reading from a file and adding specific or default chances to the objects
-     * @return
+     * Die Funktion erstellt Fragen-Objeckte und fügt sie der Liste hinzu
+     * @param file entspricht dem Textfile, Jede Zeile = ein Eintrag in der Liste
+     * @param chanceTotal Anzahl an Chancen, wenn 0, dann übernehme aus File
      */
     protected void createQuestionList(ArrayList<String> file, int chanceTotal){
         listOfAllQuestions.clear();
