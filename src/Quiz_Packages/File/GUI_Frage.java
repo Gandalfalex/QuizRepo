@@ -9,7 +9,7 @@ import java.awt.event.ActionListener;
  */
 
 /**
- *
+ * Klasse, die die Benutzeroberfläche für die Fragen im Quiz erstellt.
  * @author ICH
  */
 public class GUI_Frage extends javax.swing.JFrame {
@@ -19,12 +19,14 @@ public class GUI_Frage extends javax.swing.JFrame {
     public static final String SETTINGS = "SETTINGS";
     
     
-    
+    //Konstruktor der Klasse GUI_Frage (von NetBeans erstellt)
     public GUI_Frage() {
         initComponents();
         this.setLocationRelativeTo(null);
     }
-
+	
+	
+	//Von NetBeans selbst erstellter Code für das Aussehen der GUI.
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -164,7 +166,8 @@ public class GUI_Frage extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+	
+	
     private void AnswerAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AnswerAActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_AnswerAActionPerformed
@@ -173,7 +176,8 @@ public class GUI_Frage extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     
-
+	
+	//Namensdeklaration der Javax.Swing Objekte in der GUI.
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField AnswerA;
     private javax.swing.JTextField AnswerB;
@@ -195,33 +199,42 @@ public class GUI_Frage extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
 
-
-    public void addListener(ActionListener listener){
-        new_Question.addActionListener(listener);
-        start_game.addActionListener(listener);
-        settings.addActionListener(listener);
+	
+	/*
+	 * Setter-Methode, die "Zuhörer" (Listener) hinzufügt
+	 * @param listener
+	 * @return
+	 */
+    public void addListener(ActionListener listener){			//Parameterübergabe listener (als ActionListener -> reagiert auf Aktionen auf der GUI)
+        new_Question.addActionListener(listener);				//füge ActionListener  für new_Question-Button hinzu mithilfe von listener
+        start_game.addActionListener(listener);					//füge ActionListener  für start_game-Button hinzu
+        settings.addActionListener(listener);					//füge ActionListener  für settings-Button hinzu
     }
-
-    public String getQuestion(){
-        return Question.getText();
+	
+	/* Getter-Methoden
+	 * @param
+	 * @return getText() von Question, AnswerA, AnswerB, AnswerC, AnswerD, CorrectAnswer, chnaces
+	 */
+    public String getQuestion(){	
+        return Question.getText();								//gebe den im Textfeld Question enthaltenen Text zurück
     }
     public String getAntwortA(){
-        return AnswerA.getText();
+        return AnswerA.getText();								//gebe den im Textfeld AnswerA enthaltenen Text zurück
     }
     public String getAntwortB(){
-        return AnswerB.getText();
+        return AnswerB.getText();								//gebe den im Textfeld AnswerB enthaltenen Text zurück
     }
     public String getAntwortC(){
-        return AnswerC.getText();
+        return AnswerC.getText();								//gebe den im Textfeld AnswerC enthaltenen Text zurück
     }
     public String getAntwortD(){
-        return AnswerD.getText();
+        return AnswerD.getText();								//gebe den im Textfeld AnswerD enthaltenen Text zurück
     }
     public String getRichtigeAntwort(){
-        return CorrectAnswer.getText();
+        return CorrectAnswer.getText();							//gebe den im Textfeld CorrectAnswer enthaltenen Text zurück
     }
     public String getChances(){
-        return chances.getText();
+        return chances.getText();								//gebe den im Textfeld chances enthaltenen Text zurück
     }
 
     
