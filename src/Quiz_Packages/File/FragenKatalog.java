@@ -23,7 +23,7 @@ public class FragenKatalog {
 
 
     /**
-     *Statische Methode
+     *Statische Methode (kann von anderen Objekten/Klassen aufgerufen werden), die einen neuen Fragenkatalog erstellt, wenn zuvor keiner vorhanden ist.
      * @return instanze dieser Klasse, sofern nicht null, wenn null, erstelle neue Instanz
      */
     public static FragenKatalog getInstance(){
@@ -34,7 +34,7 @@ public class FragenKatalog {
     }
 
     /**
-	 * überprüft ob eine neu hinzu zu fügende Frage schon vorhanden ist, indem ein übergebener String mit dem Fragenkatalog zeilenweise verglichen wird
+	 * Überprüft ob eine neu hinzu zu fügende Frage schon vorhanden ist, indem ein übergebener String mit dem Fragenkatalog zeilenweise verglichen wird
 	 * Wenn der übergebene String bereits verwendet wird, dann wird dies angezeigt, falls nicht kann die Frage zum Katalog hinzugefügt werden. (true/false)
      * These function determines if a new question is viable by simply comparing the answer to all answers who are already part of the list
      * @param question Frage, die hinzugefügt werden soll
@@ -59,7 +59,7 @@ public class FragenKatalog {
     }
 
     /**
-     * Adds the new question both to the list and the file, which is currently used
+     * Setter-Methode, die eine neue Frage sowohl zur Fragenliste als auch zur Datei hinzufügt, die gerade verwendet wird
      * @param frage Diese Frage soll zum Quiz hinzugefügt werden
      */
     protected void addQuestion(Frage frage){                                                //Fügt neue Frage zur Liste aller Fragen hinzu
@@ -68,7 +68,7 @@ public class FragenKatalog {
 
 
     /**
-     * Die Funktion erstellt Fragen-Objeckte und fügt sie der Liste hinzu (nach dem Zeilenweisen durchlaufen); 
+     * Diese Setter-Methode erstellt Fragen-Objeckte und fügt sie der Liste hinzu (nach dem Zeilenweisen durchlaufen); 
      * @param file entspricht dem Textfile, Jede Zeile = ein Eintrag in der Liste
      * @param chanceTotal Anzahl an Chancen, wenn 0, dann übernehme aus File
      */
@@ -101,7 +101,12 @@ public class FragenKatalog {
         }
     }
 
-
+	/*
+	 *Getter-Methode, die ??
+	 *
+	 *@param amount (int)
+	 *@return temp
+	 */
     public ArrayList<Frage> getQuestions(int amount){
 
         if (amount >= listOfAllQuestions.size() || amount <=0){
@@ -143,14 +148,18 @@ public class FragenKatalog {
         return temp;
     }
 
+	/*Getter-Methode, die die Größe (in Bits) der verwendeten Fragen zurückgibt.
+	 * @param
+	 * @return amount
+	 */
     protected int getSizeUsedQuestions(){
-        int amount = 0;
-        for (Frage frage: listOfAllQuestions){
-            if (!frage.getUsed()){
+        int amount = 0;									//Interger für Anzahl der Bits erstellt und standardmäßig auf 0 gesetzt
+        for (Frage frage: listOfAllQuestions){			//for-each Schleife: für jedes Element "frage" (Datentyp Frage) vom Array listOfAllQuestion:
+            if (!frage.getUsed()){						//erhöhe amount um 1 wenn ???
                 amount++;
             }
         }
-        return amount;
+        return amount;									//gebe amount zurück
     }
 
 }
