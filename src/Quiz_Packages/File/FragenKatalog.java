@@ -40,21 +40,21 @@ public class FragenKatalog {
      * @param question Frage, die hinzugefügt werden soll
      * @return true, if valid, false if not
      */
-    protected boolean validateNewQuestion(String question) {
-        if (listOfAllQuestions.isEmpty()){
+    protected boolean validateNewQuestion(String question) {				//String question wird übergeben
+        if (listOfAllQuestions.isEmpty()){									//wenn Liste aller Fragen leer ist, dann gebe false zurück
             return false;
         }
-        else {
-            System.out.println(question);
-            question = question + System.getProperty("line.separator");
-            for (Frage frage: listOfAllQuestions){
+        else {																//ansonsten:
+            System.out.println(question);									//gebe auf der Konsole den übergebenen Paramater (die Frage) question aus
+            question = question + System.getProperty("line.separator");		//fügt der Frage question einen Zeilenumbruch hinzu (je nach System verschieden)
+            for (Frage frage: listOfAllQuestions){							//for-each Schleife: für jedes Element frage der Liste listOfAllQuestions tue:
 
-                if (frage.getQuestion().contains(question)){
-                    System.out.print(" existiert schon.");
-                    return false;
+                if (frage.getQuestion().contains(question)){				//wenn die Frage question bereits als Frage vorhanden ist, dann
+                    System.out.print(" existiert schon.");					//gebe auf der Konsole aus, dass sie bereits existiert
+                    return false;											//und gebe false zurück
                 }
             }
-            return true;
+            return true;													// sonst gebe true zurück 
         }
     }
 
@@ -72,7 +72,7 @@ public class FragenKatalog {
      * @param file entspricht dem Textfile, Jede Zeile = ein Eintrag in der Liste
      * @param chanceTotal Anzahl an Chancen, wenn 0, dann übernehme aus File
      */
-    protected void createQuestionList(ArrayList<String> file, int chanceTotal){
+    protected void createQuestionList(ArrayList<String> file, int chanceTotal){		//Datei und totale Chancenanzahl als Parameter übergeben
         listOfAllQuestions.clear();													//clear entfernt alle Elemente aus der ArrayList -> leere Array-Liste
         if (file.isEmpty()) throw new NullPointerException();						//überprüfe ob Datei (?) leer ist, wenn ja -> Fehlermeldung durch Exception
         int limit = file.size();													//Interger Limit soll Größe der Datei speichern als max. Durchlauf der for-Schleife
@@ -102,48 +102,50 @@ public class FragenKatalog {
     }
 
 	/*
-	 *Getter-Methode, die ??
+	 *Getter-Methode, die 
 	 *
 	 *@param amount (int)
 	 *@return temp
 	 */
-    public ArrayList<Frage> getQuestions(int amount){
+    public ArrayList<Frage> getQuestions(int amount){				//Parameter amount wird übergeben (amount= Anzahl der zu spielenden Fragen im Quiz)
 
-        if (amount >= listOfAllQuestions.size() || amount <=0){
-            amount = listOfAllQuestions.size()-1;
+        if (amount >= listOfAllQuestions.size() || amount <=0){		//wenn amount größer-gleich der Listengröße aller Fragen oder kleiner als 0, dann
+            amount = listOfAllQuestions.size()-1;					//setze amount auf den um 1 verringerten Wert der Größe aller Fragen (da Liste bei 0 beginnt)
         }
-        ArrayList<Frage> temp = new ArrayList<>();
-        System.out.println(getSizeUsedQuestions());
-        if (amount>=getSizeUsedQuestions()) {
-            System.out.println("i should be here");
-            for (Frage frage : listOfAllQuestions) {
-                frage.setUsed(false);
+		
+        ArrayList<Frage> temp = new ArrayList<>();					//Erstelle eine neue Arrayliste "temp" (soll temporär da sein?)
+        System.out.println(getSizeUsedQuestions());					//gebe auf der Konsole den Rückgabewert aus der Methode "getSizeUsedQuestions()" [folgend gSUQ] aus
+        
+		if (amount>=getSizeUsedQuestions()) {						//wenn übergebener amount-Wert größer-gleich dem gSUD-Wert, dann
+            System.out.println("i should be here");					//gebe auf der Konsole aus "Ich sollte hier sein" und: for-each Schleife ausführen
+            for (Frage frage : listOfAllQuestions) {				//für jedes Element frage aus dem Array listOfAllQuestions tue:
+                frage.setUsed(false);								//setze den "benutzt-Status" der Frage auf false
             }
         }
 
-        if (amount < 3) {
-            return listOfAllQuestions;
+        if (amount < 3) {											//wenn übergebener Parameter amount kleiner als 3 ist, dann:
+            return listOfAllQuestions;								//gebe Liste aller Fragen zurück
         }
-        else {
-            ArrayList<Frage> tempUnUsed = new ArrayList<>();
-            for (Frage frage: listOfAllQuestions){
-                if (!frage.getUsed()){
-                    tempUnUsed.add(frage);
+        else {														//ansonsten:
+            ArrayList<Frage> tempUnUsed = new ArrayList<>();		//erstelle neuen Fragen-Array "tempUnUsed" als Array-Liste (soll derzeit ungenutzt Fragen erhalten)
+            for (Frage frage: listOfAllQuestions){					//for-each-Schleife: für jedes Element Frage der Liste aller Fragen tue:
+                if (!frage.getUsed()){								//wenn ???
+                    tempUnUsed.add(frage);							//füge Frage zu tempUnUsed hinzu
                 }
             }
-            while (temp.size() != amount) {
-                Random rand = new Random();
-                int randomQ = rand.nextInt(tempUnUsed.size());
-                if (!temp.contains(tempUnUsed.get(randomQ))) {
-                    temp.add(tempUnUsed.get(randomQ));
-                    tempUnUsed.get(randomQ).setUsed(true);
+            while (temp.size() != amount) {							//solange wie die Größe von temp ungleich dem amount-Wert
+                Random rand = new Random();							//erstelle neue Random-Zahl mithilfe der Random-Klasse
+                int randomQ = rand.nextInt(tempUnUsed.size());		//erstelle Integer randomQ
+                if (!temp.contains(tempUnUsed.get(randomQ))) {		//wenn tempUnUsed an der Stelle randomQ nicht in temp enthalten ist (?), dann
+                    temp.add(tempUnUsed.get(randomQ));				//füge tempUnUsed an der Stelle randomQ zu temp hinzu
+                    tempUnUsed.get(randomQ).setUsed(true);			//und setze den "Benutzt"-Status von tempUnUsed an der Stelle randomQ auf true
                 }
             }
         }
 
 
-        for (Frage frage: temp){
-            System.out.print(frage.getQuestion());
+        for (Frage frage: temp){									//for-each-Schleife: für jedes Element frage aus dem Array temp tue:
+            System.out.print(frage.getQuestion());					//gebe auf der Konsole die Frage aus
         }
         return temp;
     }
