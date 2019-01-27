@@ -23,7 +23,7 @@ public class FragenKatalog {
 
 
     /**
-     *
+     *Statische Methode
      * @return instanze dieser Klasse, sofern nicht null, wenn null, erstelle neue Instanz
      */
     public static FragenKatalog getInstance(){
@@ -50,7 +50,7 @@ public class FragenKatalog {
             for (Frage frage: listOfAllQuestions){
 
                 if (frage.getQuestion().contains(question)){
-                    System.out.print(" existiert schon");
+                    System.out.print(" existiert schon.");
                     return false;
                 }
             }
@@ -62,36 +62,41 @@ public class FragenKatalog {
      * Adds the new question both to the list and the file, which is currently used
      * @param frage Diese Frage soll zum Quiz hinzugefügt werden
      */
-    protected void addQuestion(Frage frage){                                                // Add new Questions to a list of object
+    protected void addQuestion(Frage frage){                                                //Fügt neue Frage zur Liste aller Fragen hinzu
         listOfAllQuestions.add(frage);
     }
 
 
     /**
-     * Die Funktion erstellt Fragen-Objeckte und fügt sie der Liste hinzu
+     * Die Funktion erstellt Fragen-Objeckte und fügt sie der Liste hinzu (nach dem Zeilenweisen durchlaufen); 
      * @param file entspricht dem Textfile, Jede Zeile = ein Eintrag in der Liste
      * @param chanceTotal Anzahl an Chancen, wenn 0, dann übernehme aus File
      */
     protected void createQuestionList(ArrayList<String> file, int chanceTotal){
-        listOfAllQuestions.clear();
-        if (file.isEmpty()) throw new NullPointerException();
-        int limit = file.size();
-        for (int i = 0; i+7<=limit; i = i+7) {
-            int chances = 1;
+        listOfAllQuestions.clear();													//clear entfernt alle Elemente aus der ArrayList -> leere Array-Liste
+        if (file.isEmpty()) throw new NullPointerException();						//überprüfe ob Datei (?) leer ist, wenn ja -> Fehlermeldung durch Exception
+        int limit = file.size();													//Interger Limit soll Größe der Datei speichern als max. Durchlauf der for-Schleife
+        
+		//for-Schleife
+		for (int i = 0; i+7<=limit; i = i+7) {							// "7", da Block aus 7 Zeilen für Frage, 4 Antworten, richtige Antwort und Chancenzahl besteht
+            int chances = 1;											//setzt Chancenzahl auf 1 (wird beibehalten, falls in Datei kein korrekter Wert angegeben)
 
-            if (chanceTotal <= 3 && chanceTotal >= 1) {
-                chances = chanceTotal;
+            if (chanceTotal <= 3 && chanceTotal >= 1) {					//überprüft ob in Datei angegebene Chancenzahl zwischen 1 und 3 liegt (erlaubter Bereich)
+                chances = chanceTotal;									//wenn ja, wird Wert aus Datei genutzt und als Wert für die Chancen gesetzt
             } else {
-
+				
+				//try-catch-Phrase
                 try {
-                    String[] t = file.get(i + 6).split("");
+                    String[] t = file.get(i + 6).split("");				//Funktion um die Chancenzeile (7. der Frage) in einen verwertbaren Integer zu übersetzen
                     chances = Integer.parseInt(t[0]);
-                } catch (Exception e) {
-                    System.out.println("cant parse string");
+                } 
+				catch (Exception e) {									//soll Fehler abfangen, wenn String nicht in Integer übersetzt werden kann
+                    System.out.println("Ein Fehler ist aufgetreten bei der Übersetzung des Strings.");
                 }
             }
-            listOfAllQuestions.add(new Frage(file.get(i), file.get(i + 1),         //füge es als neue Frsge hinzu
-                        file.get(i + 2), file.get(i + 3), file.get(i + 4), file.get(i + 5), chances));
+			//Füge als neue Frage hinzu (zeilenweise)
+            listOfAllQuestions.add(new Frage(file.get(i), file.get(i + 1),
+                        file.get(i + 2), file.get(i + 3), file.get(i + 4), file.get(i + 5), chances)); //zuvor durchlaufener 7er-Block nun zeilenweise aufgespalten
 
         }
     }
