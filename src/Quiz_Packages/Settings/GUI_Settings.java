@@ -127,8 +127,8 @@ public class GUI_Settings extends javax.swing.JFrame {
         return amountOfQuestions.getText();
     }
 
-    public void setVisibleQ(boolean b) { // Max Anzahl an Fragen kann nur nach Spieldatei- Auswahl festgelegt werden
-        if (b) { // wenn übergabe wahr ist, dann blende Button und Textfeld ein
+    public void setVisibleQ(boolean show) { // Max Anzahl an Fragen kann nur nach Spieldatei- Auswahl festgelegt werden
+        if (show) { // wenn übergabe wahr ist, dann blende Button und Textfeld ein
             amountOfQuestions.setVisible(true);
         } else {
             amountOfQuestions.setVisible(false);

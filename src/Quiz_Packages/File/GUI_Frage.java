@@ -200,7 +200,7 @@ public class GUI_Frage extends javax.swing.JFrame {
 
 
 	
-	/*
+	/**
 	 * Setter-Methode, die "Zuhörer" (Listener) hinzufügt
 	 * @param listener
 	 * @return
@@ -211,8 +211,7 @@ public class GUI_Frage extends javax.swing.JFrame {
         settings.addActionListener(listener);					//füge ActionListener  für settings-Button hinzu
     }
 	
-	/* Getter-Methoden
-	 * @param
+	/** Getter-Methoden
 	 * @return getText() von Question, AnswerA, AnswerB, AnswerC, AnswerD, CorrectAnswer, chnaces
 	 */
     public String getQuestion(){	

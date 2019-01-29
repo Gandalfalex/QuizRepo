@@ -155,7 +155,6 @@ public class GUI_QuizSpielen extends javax.swing.JFrame {
     public String getButtonsBText(){return buttonB.getText();}
     public String getButtonsCText(){return buttonC.getText();}
     public String getButtonsDText(){return buttonD.getText();}
-    public String getLabel(){return labelFrage.getText();}
     public void addListener(ActionListener actions){
         buttonA.addActionListener(actions);
         buttonB.addActionListener(actions);

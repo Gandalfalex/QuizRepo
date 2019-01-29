@@ -153,7 +153,7 @@ public class Frage {
 	 * @return chances
 	 */
     public void setChances(int chances){
-        this.chances= chances;
+        this.chances = chances;
     }
 
 }

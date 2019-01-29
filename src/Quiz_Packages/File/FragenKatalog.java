@@ -46,7 +46,7 @@ public class FragenKatalog {
         }
         else {																//ansonsten:
             System.out.println(question);									//gebe auf der Konsole den übergebenen Paramater (die Frage) question aus
-            question = question + System.getProperty("line.separator");		//fügt der Frage question einen Zeilenumbruch hinzu (je nach System verschieden)
+            question = question + System.getProperty("line.separator");	//fügt der Frage question einen Zeilenumbruch hinzu
             for (Frage frage: listOfAllQuestions){							//for-each Schleife: für jedes Element frage der Liste listOfAllQuestions tue:
 
                 if (frage.getQuestion().contains(question)){				//wenn die Frage question bereits als Frage vorhanden ist, dann
@@ -60,6 +60,7 @@ public class FragenKatalog {
 
     /**
      * Setter-Methode, die eine neue Frage sowohl zur Fragenliste als auch zur Datei hinzufügt, die gerade verwendet wird
+     * Protected, da sie nur innerhalb des Packages aufgerufen werden muss
      * @param frage Diese Frage soll zum Quiz hinzugefügt werden
      */
     protected void addQuestion(Frage frage){                                                //Fügt neue Frage zur Liste aller Fragen hinzu
@@ -68,7 +69,8 @@ public class FragenKatalog {
 
 
     /**
-     * Diese Setter-Methode erstellt Fragen-Objeckte und fügt sie der Liste hinzu (nach dem Zeilenweisen durchlaufen); 
+     * Diese Setter-Methode erstellt Fragen-Objeckte und fügt sie der Liste hinzu (nach dem Zeilenweisen durchlaufen);
+     * Protected, da sie nur innerhalb des Packages aufgerufen werden muss
      * @param file entspricht dem Textfile, Jede Zeile = ein Eintrag in der Liste
      * @param chanceTotal Anzahl an Chancen, wenn 0, dann übernehme aus File
      */
@@ -101,15 +103,14 @@ public class FragenKatalog {
         }
     }
 
-	/*
-	 *Getter-Methode, die 
-	 *
-	 *@param amount (int)
-	 *@return temp
+	/**
+	 *Getter-Methode
+	 *@param amount (int) Anzahl der zu nutztenden Fragen
+	 *@return Liste an Fragen, die genutzt wurden
 	 */
     public ArrayList<Frage> getQuestions(int amount){				//Parameter amount wird übergeben (amount= Anzahl der zu spielenden Fragen im Quiz)
 
-        if (amount >= listOfAllQuestions.size() || amount <=0){		//wenn amount größer-gleich der Listengröße aller Fragen oder kleiner als 0, dann
+        if (amount >= listOfAllQuestions.size() || amount <=0){	//wenn amount größer-gleich der Listengröße aller Fragen oder kleiner als 0, dann
             amount = listOfAllQuestions.size()-1;					//setze amount auf den um 1 verringerten Wert der Größe aller Fragen (da Liste bei 0 beginnt)
         }
 		
@@ -117,7 +118,7 @@ public class FragenKatalog {
         System.out.println(getSizeUsedQuestions());					//gebe auf der Konsole den Rückgabewert aus der Methode "getSizeUsedQuestions()" [folgend gSUQ] aus
         
 		if (amount>=getSizeUsedQuestions()) {						//wenn übergebener amount-Wert größer-gleich dem gSUD-Wert, dann
-            System.out.println("i should be here");					//gebe auf der Konsole aus "Ich sollte hier sein" und: for-each Schleife ausführen
+            System.out.println("i should be here");				//gebe auf der Konsole aus "Ich sollte hier sein" und: for-each Schleife ausführen
             for (Frage frage : listOfAllQuestions) {				//für jedes Element frage aus dem Array listOfAllQuestions tue:
                 frage.setUsed(false);								//setze den "benutzt-Status" der Frage auf false
             }
@@ -129,12 +130,12 @@ public class FragenKatalog {
         else {														//ansonsten:
             ArrayList<Frage> tempUnUsed = new ArrayList<>();		//erstelle neuen Fragen-Array "tempUnUsed" als Array-Liste (soll derzeit ungenutzt Fragen erhalten)
             for (Frage frage: listOfAllQuestions){					//for-each-Schleife: für jedes Element Frage der Liste aller Fragen tue:
-                if (!frage.getUsed()){								//wenn ???
+                if (!frage.getUsed()){								//wenn Frage noch nicht genutzt wurde  !Boolean == Boolean == false
                     tempUnUsed.add(frage);							//füge Frage zu tempUnUsed hinzu
                 }
             }
-            while (temp.size() != amount) {							//solange wie die Größe von temp ungleich dem amount-Wert
-                Random rand = new Random();							//erstelle neue Random-Zahl mithilfe der Random-Klasse
+            while (temp.size() != amount) {						//solange wie die Größe von temp ungleich dem amount-Wert
+                Random rand = new Random();						//erstelle neue pseudeo-Random-Zahl
                 int randomQ = rand.nextInt(tempUnUsed.size());		//erstelle Integer randomQ
                 if (!temp.contains(tempUnUsed.get(randomQ))) {		//wenn tempUnUsed an der Stelle randomQ nicht in temp enthalten ist (?), dann
                     temp.add(tempUnUsed.get(randomQ));				//füge tempUnUsed an der Stelle randomQ zu temp hinzu
@@ -150,9 +151,8 @@ public class FragenKatalog {
         return temp;
     }
 
-	/*Getter-Methode, die die Größe (in Bits) der verwendeten Fragen zurückgibt.
-	 * @param
-	 * @return amount
+	/**Getter-Methode, die die Größe (in Bits) der verwendeten Fragen zurückgibt.
+     * @return amount Anzahl der benutzten Fragen
 	 */
     protected int getSizeUsedQuestions(){
         int amount = 0;									//Interger für Anzahl der Bits erstellt und standardmäßig auf 0 gesetzt
