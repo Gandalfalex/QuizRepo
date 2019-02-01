@@ -76,7 +76,7 @@ public class FragenKatalog {
      */
     protected void createQuestionList(ArrayList<String> file, int chanceTotal){		//Datei und totale Chancenanzahl als Parameter übergeben
         
-		System.out.println(file.size + " " + chanceTotal);							//neu, wegen Fehler in NetBeans
+		System.out.println(file.size() + " " + chanceTotal);							//neu, wegen Fehler in NetBeans
 		
 		listOfAllQuestions.clear();													//clear entfernt alle Elemente aus der ArrayList -> leere Array-Liste
         if (file.isEmpty()) throw new NullPointerException();						//überprüfe ob Datei (?) leer ist, wenn ja -> Fehlermeldung durch Exception
