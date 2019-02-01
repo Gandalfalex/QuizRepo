@@ -75,7 +75,10 @@ public class FragenKatalog {
      * @param chanceTotal Anzahl an Chancen, wenn 0, dann übernehme aus File
      */
     protected void createQuestionList(ArrayList<String> file, int chanceTotal){		//Datei und totale Chancenanzahl als Parameter übergeben
-        listOfAllQuestions.clear();													//clear entfernt alle Elemente aus der ArrayList -> leere Array-Liste
+        
+		System.out.println(file.size + " " + chanceTotal);							//neu, wegen Fehler in NetBeans
+		
+		listOfAllQuestions.clear();													//clear entfernt alle Elemente aus der ArrayList -> leere Array-Liste
         if (file.isEmpty()) throw new NullPointerException();						//überprüfe ob Datei (?) leer ist, wenn ja -> Fehlermeldung durch Exception
         int limit = file.size();													//Interger Limit soll Größe der Datei speichern als max. Durchlauf der for-Schleife
         
@@ -99,8 +102,9 @@ public class FragenKatalog {
 			//Füge als neue Frage hinzu (zeilenweise)
             listOfAllQuestions.add(new Frage(file.get(i), file.get(i + 1),
                         file.get(i + 2), file.get(i + 3), file.get(i + 4), file.get(i + 5), chances)); //zuvor durchlaufener 7er-Block nun zeilenweise aufgespalten
-
+			
         }
+	
     }
 
 	/**
