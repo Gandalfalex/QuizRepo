@@ -112,7 +112,8 @@ public class FragenKatalog {
 	 *@param amount (int) Anzahl der zu nutztenden Fragen
 	 *@return Liste an Fragen, die genutzt wurden
 	 */
-    public ArrayList<Frage> getQuestions(int amount){				//Parameter amount wird übergeben (amount= Anzahl der zu spielenden Fragen im Quiz)
+    public ArrayList<Frage> getQuestions(int amount)
+										 {				//Parameter amount wird übergeben (amount= Anzahl der zu spielenden Fragen im Quiz)
 
         if (amount >= listOfAllQuestions.size() || amount <=0){	//wenn amount größer-gleich der Listengröße aller Fragen oder kleiner als 0, dann
             amount = listOfAllQuestions.size()-1;					//setze amount auf den um 1 verringerten Wert der Größe aller Fragen (da Liste bei 0 beginnt)
@@ -155,13 +156,13 @@ public class FragenKatalog {
         return temp;
     }
 
-	/**Getter-Methode, die die Größe (in Bits) der verwendeten Fragen zurückgibt.
+	/**Getter-Methode, die die Anzahl der unbenutzten Fragen zurückgibt.
      * @return amount Anzahl der benutzten Fragen
 	 */
     protected int getSizeUsedQuestions(){
-        int amount = 0;									//Interger für Anzahl der Bits erstellt und standardmäßig auf 0 gesetzt
+        int amount = 0;									//Interger für Anzahl der noch unbenutzten Fragen
         for (Frage frage: listOfAllQuestions){			//for-each Schleife: für jedes Element "frage" (Datentyp Frage) vom Array listOfAllQuestion:
-            if (!frage.getUsed()){						//erhöhe amount um 1 wenn ???
+            if (!frage.getUsed()){						//erhöhe amount um 1 wenn Frage nicht benutzt; ! = Negation
                 amount++;
             }
         }
