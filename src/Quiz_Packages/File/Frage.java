@@ -57,7 +57,7 @@ public class Frage {
     /**
 	 * Getter-Methode für Anzahl der Chancen
      * Integer, amount of chances
-     * @return
+     * @return Anzahl der Chancen
      */
     public int getChances(){
 		return chances;
@@ -66,23 +66,14 @@ public class Frage {
     /**
 	 * Getter-Methode für die Anzahld er verwendeten Chancen
      * Integer, amount of used chances
-     * @return
+     * @return Anzahl der genutzten Chancen
      */
     public int getUsedChances(){
 		return usedChances;
 	}
 
     
-    /**
-	 * Getter-Methode um verbleibende Chancen zu errechnen und zurückzugeben
-     * remaining chances
-     * @return ? (wenn: "int actC=chances-usedChances; return actC" wäre return actC, wie formuliert man das hier im JavaDoc?)
-     */
-    public int getActChances(){                              //gibt die Anzahl der verbleibenden Versuche zurück
-        return chances - usedChances;
-    }
-
-
+   
 
     /**
      * Getter-Methode um "used" zurückzugeben
