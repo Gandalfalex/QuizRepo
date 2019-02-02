@@ -136,7 +136,7 @@ public class Frage {
      */
     public void decChances(){                                //decrementiere die Chancen, wenn Frage übersprungen wurde
         if (getChances() >1)
-              usedChances-=1;  //statt "usedChances-=1" evtl. "usedChances=usedChances--"?
+              usedChances--;  
     }
 	
 	/**
