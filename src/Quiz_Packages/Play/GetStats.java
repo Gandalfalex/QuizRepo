@@ -20,7 +20,7 @@ public class GetStats {
         if (question == null ||
                 correct == null ||
                 answer == null ||
-                t == 0) throw new NullPointerException();
+                t < 0) throw new NullPointerException();
         if (question.equals("") || correct.equals("") || answer.equals("")) throw new IllegalArgumentException();
         this.question = question;
         this.correct = correct;
@@ -34,11 +34,14 @@ public class GetStats {
     @Override
     public String toString(){       // toString Methode überschrieben
         if (givenAnswer.equals(correct)){
-            return ("Die Frage: " + question + " wurde richtig beantwortet in einer Zeit von " + Math.floor(time/1000) +
-                    " Sekunden und der Spieler nutze dafür " + usedChances + " Versuche");
+            return ("\nDie Frage: " + question.replace(System.lineSeparator(),"") + " wurde richtig beantwortet in einer Zeit von " + Math.floor(time/100)/10 +
+                    " Sekunden. \nDer Spieler nutze dafür " + usedChances + " Versuche");
         }
-        return ("\nDie Frage:" + question + " wurde mit: " + givenAnswer + "beantwortet. Richtig wäre: "+ correct + 
-                " gewesen. Benötigt wurden  " + time + " Millisekunden. Der Spieler benötigte dafür "+ usedChances+ " Versuche. Aktuell "+ points + " \n\r");
+        return ("\nDie Frage:" + question.replace(System.lineSeparator(),"") + " wurde mit: " + givenAnswer.replace(System.lineSeparator(),"") + " beantwortet. Richtig wäre: "+ correct.replace(System.lineSeparator(),"") + 
+                " gewesen. Benötigt wurden  " + Math.floor(time/100)/10 + " Sekunden. \nDer Spieler benötigte dafür "+ usedChances+ " Versuche. Aktuell "+ points + " \n\r");
     }
     
 }
+
+
+    
