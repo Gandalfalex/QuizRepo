@@ -123,7 +123,7 @@ public class FragenKatalog {
         System.out.println(getSizeUsedQuestions());					//gebe auf der Konsole den Rückgabewert aus der Methode "getSizeUsedQuestions()" [folgend gSUQ] aus
         
 		if (amount>=getSizeUsedQuestions()) {						//wenn übergebener amount-Wert größer-gleich dem gSUD-Wert, dann
-            System.out.println("i should be here");				//gebe auf der Konsole aus "Ich sollte hier sein" und: for-each Schleife ausführen
+
             for (Frage frage : listOfAllQuestions) {				//für jedes Element frage aus dem Array listOfAllQuestions tue:
                 frage.setUsed(false);								//setze den "benutzt-Status" der Frage auf false
             }
