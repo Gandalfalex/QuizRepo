@@ -50,6 +50,7 @@ public class Frage {
         this.answer4 = answer4;
         this.chances = chances;
         this.usedChances = chances-1;                         //kopiere die Chancen, zweite kann bearbeitet werden
+																// im Moment des Fragenaufrufs, wirddie 1. Chance bereits verwendet -> es bleiben noch chancen-1
     }
 
 //alle Getter-Methoden
