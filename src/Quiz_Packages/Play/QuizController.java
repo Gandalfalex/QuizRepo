@@ -9,47 +9,54 @@ import java.util.List;
 
 
 public class QuizController {
-
+	
+	// Variablen der Klasse QuizController
     private WorkingQuiz work;
     private GUI_QuizSpielen play;
     private long time;
 
         
-        
-    public QuizController(GUI_QuizSpielen play, WorkingQuiz work){
-        if (play == null) throw new NullPointerException();
-        this.play = play;   
-        this.work = work; 
-        this.play.addListener(new Listener());
-        setTexts(work.setText());
-        time = System.currentTimeMillis();                                      //startzeit beim erzeugen des Objekts
+    // Konstruktor    
+    public QuizController(GUI_QuizSpielen play, WorkingQuiz work){			// übergebene Parameter play (aus GUI_Quizspielen) und work vom Typ WorkingQuiz
+        if (play == null) throw new NullPointerException();					// wenn play leer -> Nullpointer-Exception
+        this.play = play;   												// Zuoprdnung Parameter play zu Klassenvariable play
+        this.work = work; 													// Zuordnung Parameter work zu Klassenvariable work
+        this.play.addListener(new Listener());								// Erzeuge neuen Listener für Klassenvariable play
+        setTexts(work.setText());											// Setze Text bei work
+        time = System.currentTimeMillis();                               	// Startzeit beim Erzeugen des Objekts (für später festhalten)
     }
         
     
     
-    
+    /*
+	 * Setter-Methode
+	 * @param texts
+	 * @return
+	 */
     public void setTexts(List<String> texts){
-        if (texts == null || texts.isEmpty()) throw new IllegalArgumentException();
-        play.SetButtonsAText(texts.get(1));                               //setzte die Button Texte
+        if (texts == null || texts.isEmpty()) throw new IllegalArgumentException(); 	// wenn text leer/null -> IllegalArgument-Exception
+        play.SetButtonsAText(texts.get(1));                             	// Setze die verschiedenen  Buttontexte von play (Button A bis D)
         play.SetButtonsBText(texts.get(2));
         play.SetButtonsCText(texts.get(3));
         play.SetButtonsDText(texts.get(4));
-        play.SetLableText(texts.get(0));
-
-        if (work.getRemainingChances() >0){                                     //überspringen Button wird nur benötigt, wenn man überspringen kann
-            play.enableButtonWait();                                    
-            play.SetButtonWaitText("Frage überspringen, es bleiben " + (work.getRemainingChances()+1) + " Versuche") ;
+        play.SetLableText(texts.get(0));									// Setze den Text vom Labelfeld
+		// Razupaltuff?! die Zahlen in Klammern sind die Zeilenzahlen aus dem eingelesenen Textdokument?
+		
+		//überspringen Button wird nur benötigt, wenn man überspringen kann; daher Überprüfung mit if-Schleife
+        if (work.getRemainingChances() >0){                    				// wenn verbleibende Chancen größer als 0
+            play.enableButtonWait();                                    	// aktiviere Button fürs Warten/Überspringen
+            play.SetButtonWaitText("Frage überspringen, es bleiben " + (work.getRemainingChances()+1) + " Versuche") ;		//Text auf Überspringen-Button setzen
         }
-        else {
-            play.disableButtonWait();
-            play.SetButtonWaitText("Frage darf nicht mehr übersprungen werden") ;
+        else {																// wenn keine Chancen mehr verbleiben
+            play.disableButtonWait();										// deaktiviere Überspringen-Button
+            play.SetButtonWaitText("Frage darf nicht mehr übersprungen werden") ;		// Setze Text des Buttons Überspringen
         }
     } 
      
         
        
         
-        
+    // Listener     
     public class Listener implements ActionListener{
             
         @Override  //Overrides a given function
@@ -57,7 +64,7 @@ public class QuizController {
             if (evt.getActionCommand().equals(GUI_QuizSpielen.BUTTONWAIT)){     //wenn eine Frage übersprungen wurde               
                 work.decrementChances();                                        //Setze die Verbliebenen Chancen runter
                 System.out.print(" Frage wurde übersprungen, es bleiben noch " + work.getRemainingChances() + " über \n");
-                nextQuestion();                                                 //rufe die nöchste Frage auf
+                nextQuestion();                                                 //rufe die nächste Frage auf
             }
             else if (evt.getActionCommand().equals(GUI_QuizSpielen.BUTTONA)) {
                 work.isCorrect(play.getButtonsAText());
@@ -98,13 +105,13 @@ public class QuizController {
         if (work.getAllObjectsSize()>=1){                                  //teste, ob noch genug Fragen im Vorrat sind, prepare bereitet alle neuen Daten vor
             work.calculateNextQuestion();
             setTexts(work.setText());
-            play.setFinishedVisible();                                                  //setTexts hohlt sich dann die Informationen für die Buttons
+            play.setFinishedVisible();                                                  //setTexts holt sich dann die Informationen für die Buttons
         }
         else { 
-            String s = System.getProperty("user.dir") + "\\Stats.txt";                  //dort befindet sich die Stats datei
+            String s = System.getProperty("user.dir") + "\\Stats.txt";                  //dort befindet sich die Stats-Datei
             Readtxt stats = Readtxt.getInstance();
             stats.addStats(work.printStats(), s);
-            play.disableButtons();                                                      //mache die Buttons unsichtbar, besseres Ende wird noch gesuch
+            play.disableButtons();                                                      //mache die Buttons unsichtbar, besseres Ende wird noch gesucht
             play.disableButtonWait();
             play.SetLableText("Spiel beendet mit " + work.getPoints() + " Punkten");
         }       
