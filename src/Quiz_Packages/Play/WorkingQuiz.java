@@ -68,13 +68,14 @@ public class WorkingQuiz {
         List<String> oldInformations = temp;							// speichere temp in Variable "oldInformation"
         Random rand = new Random();										// erstelle neue Random-Zahl mit Java-Befehl Random()
 		
-		//Razupaltuff?! wieso <4?
+		//der ZahlenArray wird mit Zahlen von 1-4 random gefüllt. Zahlen stellen dann die Antworten A-D da.
+        //So werden die Antworten random verteilt
         while (zahl.size() < 4) {                                       // solange wie die Zahl kleiner als 4, tue:    / Alter Kommentar: r steht für die Anzahl an Fragen, bekommt man aus der Settings-Klasse
             int i = rand.nextInt(4)+1;                                  // neue Random Zahl i (Integer); nextInt(4), addiere 1 
             if (!zahl.contains(i))                                      // Liste darf diese Zahl i nicht enthalten
                 zahl.add(i);                                            // dann wird sie geaddet (wenn nicht in Liste enthalten)
         }
-        temp.set(1,oldInformations.get(zahl.get(0)));					// Razupaltuff?! Was passiert denn hier?
+        temp.set(1,oldInformations.get(zahl.get(0)));					// zahl enthählt die Nummern von 1 - 4 random, die Fragen werden hier einfach nur ausgetauscht
         temp.set(2,oldInformations.get(zahl.get(1)));
         temp.set(3,oldInformations.get(zahl.get(2)));
         temp.set(4,oldInformations.get(zahl.get(3)));

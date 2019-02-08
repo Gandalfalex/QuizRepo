@@ -40,7 +40,7 @@ public class QuizController {
         play.SetButtonsCText(texts.get(3));
         play.SetButtonsDText(texts.get(4));
         play.SetLableText(texts.get(0));									// Setze den Text vom Labelfeld
-		// Razupaltuff?! die Zahlen in Klammern sind die Zeilenzahlen aus dem eingelesenen Textdokument?
+		//die Indices stellen die Frage sowie die Antworten dar
 		
 		//überspringen Button wird nur benötigt, wenn man überspringen kann; daher Überprüfung mit if-Schleife
         if (work.getRemainingChances() >0){                    				// wenn verbleibende Chancen größer als 0
