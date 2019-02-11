@@ -76,12 +76,12 @@ public class Setting_Controller {
                 count++;
             }
         }      
-        catch (Exception ex) {
+        catch (Exception ex) {                                                  //zeigt wo die Fehler sind
             ex.printStackTrace();
         }
 
-        int c = (int) (Math.floor(count/7));
-        System.out.print(count + "  " + c);
+        int c = (int) (Math.floor(count/7));                                    //müssen mind. 2 Fragen mit Atwortmöglichkeiten gegeben sein
+        System.out.print(count + "  " + c);                                     //jeweils 1 Frage+ Antwort braucht 7 Zeilen
         if (c < 2)
             return 0;
         return c;
