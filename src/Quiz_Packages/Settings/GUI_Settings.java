@@ -11,16 +11,16 @@ import java.awt.event.ActionListener;
  *
  * @author ICH
  */
-public class GUI_Settings extends javax.swing.JFrame {
+public class GUI_Settings extends javax.swing.JFrame {      //Benutzeroberfläche wird ertellt.
 
-    public static final String NEWQUIZ = "NEWQUIZ";
-    public static final String CHANCES = "CHANCES";
+    public static final String NEWQUIZ = "NEWQUIZ";        //Variablen (Z. 16-19) werden deklariert und initialisiert.
+    public static final String CHANCES = "CHANCES";         // Variablen mit final sind unveränderbar (konstant)
     public static final String AOQ = "AOQ";
     public static final String FINISHED = "FINISHED";
 
-    public GUI_Settings() {
-        initComponents();
-        this.setLocationRelativeTo(null);
+    public GUI_Settings() {         //Konstruktor erzeugt die GUI (Benutzeroberfläche)
+        initComponents();           //Methode
+        this.setLocationRelativeTo(null);       //zentriert die GUI. Fenster wird in der Mitte angezeigt.
     }
 
     /**
