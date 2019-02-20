@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>Quiz_Packages.Settings</OriginalElement>
+  <nodes>
+    <node x="358.5" y="862.0">Quiz_Packages.Settings.Setting_Controller</node>
+    <node x="432.5029761904762" y="0.0">Quiz_Packages.Settings.GUI_Settings</node>
+    <node x="65.0" y="532.0">Quiz_Packages.Settings.Settings</node>
+    <node x="352.0" y="621.5">Quiz_Packages.Settings.Setting_Controller.Listen</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Quiz_Packages.Settings.Setting_Controller.Listen" target="Quiz_Packages.Settings.GUI_Settings">
+      <point x="0.0" y="-25.5" />
+      <point x="479.0" y="512.0" />
+      <point x="522.1279761904761" y="512.0" />
+      <point x="-29.875" y="236.0" />
+    </edge>
+    <edge source="Quiz_Packages.Settings.GUI_Settings" target="Quiz_Packages.Settings.GUI_Settings">
+      <point x="-89.625" y="236.0" />
+      <point x="462.3779761904762" y="492.0" />
+      <point x="412.5029761904762" y="492.0" />
+      <point x="412.5029761904762" y="236.0" />
+      <point x="-119.5" y="-0.0" />
+    </edge>
+    <edge source="Quiz_Packages.Settings.Setting_Controller" target="Quiz_Packages.Settings.GUI_Settings">
+      <point x="103.28571428571428" y="-70.5" />
+      <point x="582.2857142857142" y="842.0" />
+      <point x="627.5" y="842.0" />
+      <point x="627.5" y="512.0" />
+      <point x="641.6279761904761" y="512.0" />
+      <point x="89.62500000000001" y="236.0" />
+    </edge>
+    <edge source="Quiz_Packages.Settings.Setting_Controller.Listen" target="Quiz_Packages.Settings.Setting_Controller">
+      <point x="0.0" y="25.5" />
+      <point x="0.0" y="-70.5" />
+    </edge>
+    <edge source="Quiz_Packages.Settings.Setting_Controller" target="Quiz_Packages.Settings.Setting_Controller.Listen">
+      <point x="-34.42857142857139" y="-70.5" />
+      <point x="444.5714285714286" y="822.0" />
+      <point x="394.3333333333333" y="822.0" />
+      <point x="-84.66666666666669" y="25.5" />
+    </edge>
+    <edge source="Quiz_Packages.Settings.Settings" target="Quiz_Packages.Settings.Settings">
+      <point x="-106.80000000000001" y="115.0" />
+      <point x="91.69999999999999" y="782.0" />
+      <point x="45.0" y="782.0" />
+      <point x="45.0" y="723.6666666666667" />
+      <point x="-133.5" y="76.66666666666669" />
+    </edge>
+    <edge source="Quiz_Packages.Settings.Setting_Controller" target="Quiz_Packages.Settings.Settings">
+      <point x="-68.85714285714278" y="-70.5" />
+      <point x="410.1428571428572" y="832.0" />
+      <point x="305.29999999999995" y="832.0" />
+      <point x="106.79999999999995" y="115.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.6000000000000001" x="339.83333333333314" y="517.8333333333333" />
+  <SelectedNodes>
+    <node>Quiz_Packages.Settings.Setting_Controller.Listen</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Inner Classes</Category>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
