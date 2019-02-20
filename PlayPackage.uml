@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>Quiz_Packages.Play</OriginalElement>
+  <nodes>
+    <node x="118.82908163265307" y="1250.0">Quiz_Packages.Play.QuizController</node>
+    <node x="0.0" y="951.5">Quiz_Packages.Play.QuizController.Listener</node>
+    <node x="65.20408163265307" y="0.0">Quiz_Packages.Play.GUI_QuizSpielen</node>
+    <node x="344.2040816326531" y="253.5">Quiz_Packages.Play.GetStats</node>
+    <node x="387.4540816326531" y="774.0">Quiz_Packages.Play.WorkingQuiz</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Quiz_Packages.Play.WorkingQuiz" target="Quiz_Packages.Play.GetStats">
+      <point x="-90.33333333333331" y="-203.0" />
+      <point x="432.62074829931976" y="754.0" />
+      <point x="451.4540816326531" y="754.0" />
+      <point x="-35.75" y="103.5" />
+    </edge>
+    <edge source="Quiz_Packages.Play.QuizController.Listener" target="Quiz_Packages.Play.QuizController">
+      <point x="0.0" y="25.5" />
+      <point x="127.0" y="1220.0" />
+      <point x="186.97193877551027" y="1220.0" />
+      <point x="-90.8571428571428" y="-93.0" />
+    </edge>
+    <edge source="Quiz_Packages.Play.WorkingQuiz" target="Quiz_Packages.Play.WorkingQuiz">
+      <point x="-90.33333333333333" y="203.0" />
+      <point x="432.62074829931976" y="1200.0" />
+      <point x="367.4540816326531" y="1200.0" />
+      <point x="367.4540816326531" y="977.0" />
+      <point x="-135.5" y="-0.0" />
+    </edge>
+    <edge source="Quiz_Packages.Play.QuizController.Listener" target="Quiz_Packages.Play.GUI_QuizSpielen">
+      <point x="-5.6843418860808015E-14" y="-25.5" />
+      <point x="126.99999999999994" y="754.0" />
+      <point x="154.82908163265307" y="754.0" />
+      <point x="-29.875" y="357.0" />
+    </edge>
+    <edge source="Quiz_Packages.Play.QuizController" target="Quiz_Packages.Play.WorkingQuiz">
+      <point x="136.28571428571428" y="-93.0" />
+      <point x="414.11479591836735" y="1230.0" />
+      <point x="613.2874149659864" y="1230.0" />
+      <point x="90.33333333333331" y="203.0" />
+    </edge>
+    <edge source="Quiz_Packages.Play.GetStats" target="Quiz_Packages.Play.GetStats">
+      <point x="-107.25" y="103.5" />
+      <point x="379.9540816326531" y="480.5" />
+      <point x="324.2040816326531" y="480.5" />
+      <point x="324.2040816326531" y="357.0" />
+      <point x="-143.0" y="-0.0" />
+    </edge>
+    <edge source="Quiz_Packages.Play.QuizController" target="Quiz_Packages.Play.QuizController">
+      <point x="0.0" y="93.0" />
+      <point x="277.8290816326531" y="1456.0" />
+      <point x="98.82908163265307" y="1456.0" />
+      <point x="98.82908163265307" y="1343.0" />
+      <point x="-159.0" y="-0.0" />
+    </edge>
+    <edge source="Quiz_Packages.Play.QuizController" target="Quiz_Packages.Play.GUI_QuizSpielen">
+      <point x="45.428571428571445" y="-93.0" />
+      <point x="323.2576530612245" y="1230.0" />
+      <point x="288.82908163265313" y="1230.0" />
+      <point x="288.82908163265313" y="754.0" />
+      <point x="274.3290816326531" y="754.0" />
+      <point x="89.625" y="357.0" />
+    </edge>
+    <edge source="Quiz_Packages.Play.QuizController" target="Quiz_Packages.Play.QuizController.Listener">
+      <point x="-136.28571428571422" y="-93.0" />
+      <point x="141.54336734693885" y="1230.0" />
+      <point x="42.333333333333314" y="1230.0" />
+      <point x="-84.66666666666669" y="25.5" />
+    </edge>
+    <edge source="Quiz_Packages.Play.GUI_QuizSpielen" target="Quiz_Packages.Play.GUI_QuizSpielen">
+      <point x="-89.625" y="357.0" />
+      <point x="95.07908163265307" y="734.0" />
+      <point x="45.20408163265307" y="734.0" />
+      <point x="45.20408163265307" y="357.0" />
+      <point x="-119.5" y="-0.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.8" x="244.0" y="210.375" />
+  <SelectedNodes>
+    <node>Quiz_Packages.Play.QuizController.Listener</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Inner Classes</Category>
+    <Category>Properties</Category>
+    <Category>Methods</Category>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

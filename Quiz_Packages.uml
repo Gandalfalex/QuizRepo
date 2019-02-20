@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>Quiz_Packages</OriginalElement>
+  <nodes>
+    <node x="231.0" y="9.826171875">Quiz_Packages.Play</node>
+    <node x="228.24305555555557" y="178.826171875">Quiz_Packages.File</node>
+    <node x="199.6388888888889" y="297.826171875">Quiz_Packages.Start_Question</node>
+    <node x="40.0" y="9.826171875">Quiz_Packages.Settings</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Quiz_Packages.File" target="Quiz_Packages.File">
+      <point x="-8.083333333333336" y="14.5" />
+      <point x="268.65972222222223" y="247.826171875" />
+      <point x="188.24305555555557" y="247.826171875" />
+      <point x="188.24305555555557" y="189.701171875" />
+      <point x="-48.5" y="-3.625" />
+    </edge>
+    <edge source="Quiz_Packages.Play" target="Quiz_Packages.Play">
+      <point x="-25.0" y="14.5" />
+      <point x="256.0" y="78.826171875" />
+      <point x="191.0" y="78.826171875" />
+      <point x="191.0" y="20.701171875" />
+      <point x="-50.0" y="-3.625" />
+    </edge>
+    <edge source="Quiz_Packages.Play" target="Quiz_Packages.File">
+      <point x="25.0" y="14.5" />
+      <point x="306.0" y="138.826171875" />
+      <point x="298.29861111111114" y="138.826171875" />
+      <point x="21.555555555555543" y="-14.5" />
+    </edge>
+    <edge source="Quiz_Packages.File" target="Quiz_Packages.Settings">
+      <point x="-43.111111111111114" y="-14.5" />
+      <point x="233.63194444444446" y="158.826171875" />
+      <point x="110.58333333333333" y="158.826171875" />
+      <point x="10.083333333333329" y="14.5" />
+    </edge>
+    <edge source="Quiz_Packages.Start_Question" target="Quiz_Packages.File">
+      <point x="42.0" y="-25.5" />
+      <point x="325.6388888888889" y="277.826171875" />
+      <point x="317.1597222222223" y="277.826171875" />
+      <point x="40.416666666666686" y="14.5" />
+    </edge>
+    <edge source="Quiz_Packages.File" target="Quiz_Packages.Play">
+      <point x="10.777777777777771" y="-14.5" />
+      <point x="287.52083333333337" y="128.826171875" />
+      <point x="296.0" y="128.826171875" />
+      <point x="15.0" y="14.5" />
+    </edge>
+    <edge source="Quiz_Packages.Settings" target="Quiz_Packages.Settings">
+      <point x="-10.083333333333343" y="14.5" />
+      <point x="90.41666666666666" y="78.826171875" />
+      <point x="0.0" y="78.826171875" />
+      <point x="0.0" y="14.659505208333314" />
+      <point x="-60.5" y="-9.666666666666686" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="121.0" y="88.5" />
+  <SelectedNodes>
+    <node>Quiz_Packages.File</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

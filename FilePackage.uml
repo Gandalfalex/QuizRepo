@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>Quiz_Packages.File</OriginalElement>
+  <nodes>
+    <node x="484.65" y="1146.0">Quiz_Packages.File.FileController</node>
+    <node x="740.6500000000001" y="774.0">Quiz_Packages.File.Readtxt</node>
+    <node x="414.65000000000003" y="874.5">Quiz_Packages.File.FileController.Listen</node>
+    <node x="44.150000000000034" y="209.0">Quiz_Packages.File.Frage</node>
+    <node x="436.8666666666667" y="0.0">Quiz_Packages.File.GUI_Frage</node>
+    <node x="45.00000000000006" y="785.5">Quiz_Packages.File.FragenKatalog</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Quiz_Packages.File.FragenKatalog" target="Quiz_Packages.File.FragenKatalog">
+      <point x="0.0" y="114.5" />
+      <point x="201.00000000000006" y="1054.5" />
+      <point x="5.0" y="1054.5" />
+      <point x="5.0" y="823.6666666666667" />
+      <point x="-156.0" y="-76.33333333333326" />
+    </edge>
+    <edge source="Quiz_Packages.File.FragenKatalog" target="Quiz_Packages.File.Frage">
+      <point x="0.0" y="-114.5" />
+      <point x="201.00000000000006" y="754.0" />
+      <point x="215.65000000000003" y="754.0" />
+      <point x="0.0" y="148.0" />
+    </edge>
+    <edge source="Quiz_Packages.File.FileController.Listen" target="Quiz_Packages.File.FileController">
+      <point x="95.25" y="25.5" />
+      <point x="636.9000000000001" y="1086.0" />
+      <point x="617.2" y="1086.0" />
+      <point x="12.050000000000068" y="-180.5" />
+    </edge>
+    <edge source="Quiz_Packages.File.FileController" target="Quiz_Packages.File.Readtxt">
+      <point x="108.45000000000005" y="-180.5" />
+      <point x="713.6" y="1126.0" />
+      <point x="977.3500000000001" y="1126.0" />
+      <point x="105.20000000000005" y="126.0" />
+    </edge>
+    <edge source="Quiz_Packages.File.Readtxt" target="Quiz_Packages.File.Readtxt">
+      <point x="-52.599999999999966" y="126.0" />
+      <point x="819.5500000000001" y="1056.0" />
+      <point x="710.6500000000001" y="1056.0" />
+      <point x="710.6500000000001" y="900.0" />
+      <point x="-131.5" y="-0.0" />
+    </edge>
+    <edge source="Quiz_Packages.File.GUI_Frage" target="Quiz_Packages.File.GUI_Frage">
+      <point x="-113.25" y="357.0" />
+      <point x="474.6166666666667" y="734.0" />
+      <point x="416.8666666666667" y="734.0" />
+      <point x="416.8666666666667" y="357.0" />
+      <point x="-151.0" y="-0.0" />
+    </edge>
+    <edge source="Quiz_Packages.File.FileController.Listen" target="Quiz_Packages.File.GUI_Frage">
+      <point x="0.0" y="-25.5" />
+      <point x="541.6500000000001" y="754.0" />
+      <point x="550.1166666666667" y="754.0" />
+      <point x="-37.75" y="357.0" />
+    </edge>
+    <edge source="Quiz_Packages.File.FileController" target="Quiz_Packages.File.FileController">
+      <point x="0.0" y="180.5" />
+      <point x="605.15" y="1527.0" />
+      <point x="464.65" y="1527.0" />
+      <point x="464.65" y="1326.5" />
+      <point x="-120.5" y="-0.0" />
+    </edge>
+    <edge source="Quiz_Packages.File.FileController" target="Quiz_Packages.File.FileController.Listen">
+      <point x="-36.14999999999998" y="-180.5" />
+      <point x="569.0" y="1096.0" />
+      <point x="509.90000000000003" y="1096.0" />
+      <point x="-31.75" y="25.5" />
+    </edge>
+    <edge source="Quiz_Packages.File.FileController" target="Quiz_Packages.File.Frage">
+      <point x="-60.25" y="-180.5" />
+      <point x="544.9" y="1106.0" />
+      <point x="367.50000000000006" y="1106.0" />
+      <point x="367.50000000000006" y="754.0" />
+      <point x="352.8500000000001" y="754.0" />
+      <point x="137.20000000000005" y="148.0" />
+    </edge>
+    <edge source="Quiz_Packages.File.FileController.Listen" target="Quiz_Packages.File.FileController.Listen">
+      <point x="-95.25" y="25.5" />
+      <point x="446.40000000000003" y="945.5" />
+      <point x="394.65000000000003" y="945.5" />
+      <point x="394.65000000000003" y="900.0" />
+      <point x="-127.0" y="-0.0" />
+    </edge>
+    <edge source="Quiz_Packages.File.Frage" target="Quiz_Packages.File.Frage">
+      <point x="-137.2" y="148.0" />
+      <point x="78.45000000000005" y="525.0" />
+      <point x="24.150000000000034" y="525.0" />
+      <point x="24.150000000000034" y="357.0" />
+      <point x="-171.5" y="-0.0" />
+    </edge>
+    <edge source="Quiz_Packages.File.FileController" target="Quiz_Packages.File.FragenKatalog">
+      <point x="-84.34999999999991" y="-180.5" />
+      <point x="520.8000000000001" y="1116.0" />
+      <point x="325.8" y="1116.0" />
+      <point x="124.79999999999995" y="114.5" />
+    </edge>
+    <edge source="Quiz_Packages.File.FileController" target="Quiz_Packages.File.GUI_Frage">
+      <point x="36.14999999999998" y="-180.5" />
+      <point x="641.3" y="1096.0" />
+      <point x="679.1500000000001" y="1096.0" />
+      <point x="679.1500000000001" y="754.0" />
+      <point x="625.6166666666667" y="754.0" />
+      <point x="37.75" y="357.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.8" x="336.0" y="997.375" />
+  <SelectedNodes>
+    <node>Quiz_Packages.File.FileController.Listen</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Inner Classes</Category>
+    <Category>Properties</Category>
+    <Category>Methods</Category>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
