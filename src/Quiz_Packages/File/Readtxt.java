@@ -49,7 +49,7 @@ public class Readtxt {
     }
 
     /**
-     * Setter.Methode, die übergebenen Dateinamen auf Korrektheit überprüft und anschließend als fileName speichert.
+     * Setter-Methode, die übergebenen Dateinamen auf Korrektheit überprüft und anschließend als fileName speichert.
      * @param fileName sets the Path to the file
      */
     public void setFileName(String fileName){						//Parameter fileName (Dateiname) wird übergeben
@@ -80,7 +80,7 @@ public class Readtxt {
             writer.flush();														//schreibe sie in die Datei -> flush-Befehl googlen
             writer.close();														//schließe den writer
         } catch (IOException e) {												//auffangen:
-            e.printStackTrace();												// ???
+            e.printStackTrace();
         }
 
     }
@@ -145,7 +145,7 @@ public class Readtxt {
         finally {																//finally -> Googlen
             try {																//Versuche
                 if(br!=null) br.close();										//wenn br nicht leer ist, schließe ihn
-                if(fr!=null) fr.close();										//wenn fr nicht leer ist, schliefe ihn
+                if(fr!=null) fr.close();										//wenn fr nicht leer ist, schließe ihn
             }
             catch(Exception ex) {}												//Auffangen
         }

@@ -15,9 +15,9 @@ public class Start_Question {
 	 */
     
     public static void main(String[] args) {			//statischer Konstruktor, Übergabe des String-Array args
-        GUI_Frage gui = new GUI_Frage();				//erzeugen einer neuen Instanz der Klasse GUI_Frage -> Benutzeroberfläche für Frage wird erstellt
+        GUI_Frage gui = new GUI_Frage();				//Erzeugen einer neuen Instanz der Klasse GUI_Frage -> Benutzeroberfläche für Frage wird erstellt
         gui.setVisible(true);							//Benutzeroberfläche wird sichtbar gemacht
-        new FileController(gui);						//Razupaltuff?! erstelle neuen Filecontroller mit Parameter gui? was ist das?; Wofür wird args verwendet? (Titelzeile des Konstruktors)
+        new FileController(gui);						//erstelle neuen Filecontroller
         
     }
     

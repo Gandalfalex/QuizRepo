@@ -12,7 +12,7 @@ import java.util.*;
 
 
 /**
- * Controller Class of an MVC Model
+ * Controller Class des MVC
  */
 public class FileController {
     
@@ -180,9 +180,9 @@ public class FileController {
      */
     private boolean validInput(List<String> temp){
         List<String> inputs = temp;                                                 //Liste kopieren um Datenverlust aus globaler Variable zu vermeiden
-        String correct = inputs.get(5);                                         //hohle die richtige Antwort, speichere
+        String correct = inputs.get(5);                                         //hole die richtige Antwort, speichere
         inputs.remove(0);                                                 //und entferne sie aus der Liste
-        inputs.remove(4);                                                 //entferne auch Frage und Chancenzahl  //keine schöne Lösung, aber funktioniert
+        inputs.remove(4);                                                 //entferne auch Frage und Chancenzahl 
         inputs.remove(4);
         if (inputs.contains(correct)){                                          //teste. ob der String noch vorhanden ist
             int a = 0;      
