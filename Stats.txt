@@ -1,30 +1,20 @@
 
-Die Frage:Frage17
- wurde mit: S8
-beantwortet. Richtig wäre: S6
- gewesen. Benötigt wurden  4687 Millisekunden. Der Spieler benötigte dafür 0 Versuche. Aktuell 0 
+Die Frage:Frage8 wurde mit: EE beantwortet. Richtig wäre: II gewesen. Benötigt wurden  6.3 Sekunden. 
+Der Spieler benötigte dafür 2 Versuche. Aktueller Punktestand: 0 
 
 
-Die Frage:Frage15
- wurde mit: Loki
-beantwortet. Richtig wäre: Odin
- gewesen. Benötigt wurden  160 Millisekunden. Der Spieler benötigte dafür 1 Versuche. Aktuell 0 
+Die Frage:Frage4 wurde mit: O beantwortet. Richtig wäre: P gewesen. Benötigt wurden  1.6 Sekunden. 
+Der Spieler benötigte dafür 1 Versuche. Aktueller Punktestand: 0 
 
 
-Die Frage:Frage18
- wurde mit: H�lle
-beantwortet. Richtig wäre: Walhalla
- gewesen. Benötigt wurden  182 Millisekunden. Der Spieler benötigte dafür 0 Versuche. Aktuell 0 
+Die Frage:?"=FĀ���"�$%Frage1: Hier steht die Fragestellung. wurde mit: A: Hier steht Anwort A. beantwortet. Richtig wäre: D: Hier steht die richtige Antwort, ausgeschriebrn. gewesen. Benötigt wurden  2.1 Sekunden. 
+Der Spieler benötigte dafür 2 Versuche. Aktueller Punktestand: 0 
 
 
-Die Frage:Frage3
- wurde mit: J
-beantwortet. Richtig wäre: I
- gewesen. Benötigt wurden  166 Millisekunden. Der Spieler benötigte dafür 2 Versuche. Aktuell 0 
+Die Frage: Frage5 wurde richtig beantwortet in einer Zeit von 1.9 Sekunden. 
+Der Spieler nutze dafür 1 Versuche. Aktueller Punktestand: 0 
 
 
-Die Frage:Frage10
- wurde mit: schon 10
-beantwortet. Richtig wäre: wow
- gewesen. Benötigt wurden  167 Millisekunden. Der Spieler benötigte dafür 0 Versuche. Aktuell 0 
+Die Frage:Frage2 wurde mit: G beantwortet. Richtig wäre: F gewesen. Benötigt wurden  1.9 Sekunden. 
+Der Spieler benötigte dafür 2 Versuche. Aktueller Punktestand: 0 
 

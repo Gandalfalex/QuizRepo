@@ -3,6 +3,22 @@
   <component name="ChangeListManager">
     <list default="true" id="89500a2b-7ce1-465f-aaed-98d451f9384a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Stats.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Stats.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quiz-Belegarbeit/Quiz_Packages/File/FileController$Listen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quiz-Belegarbeit/Quiz_Packages/File/FileController$Listen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quiz-Belegarbeit/Quiz_Packages/File/FileController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quiz-Belegarbeit/Quiz_Packages/File/FileController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quiz-Belegarbeit/Quiz_Packages/File/Frage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quiz-Belegarbeit/Quiz_Packages/File/Frage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quiz-Belegarbeit/Quiz_Packages/File/FragenKatalog.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quiz-Belegarbeit/Quiz_Packages/File/FragenKatalog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quiz-Belegarbeit/Quiz_Packages/File/GUI_Frage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quiz-Belegarbeit/Quiz_Packages/File/GUI_Frage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quiz-Belegarbeit/Quiz_Packages/Play/GetStats.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quiz-Belegarbeit/Quiz_Packages/Play/GetStats.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quiz-Belegarbeit/Quiz_Packages/Play/QuizController$Listener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quiz-Belegarbeit/Quiz_Packages/Play/QuizController$Listener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quiz-Belegarbeit/Quiz_Packages/Play/QuizController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quiz-Belegarbeit/Quiz_Packages/Play/QuizController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quiz-Belegarbeit/Quiz_Packages/Play/WorkingQuiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quiz-Belegarbeit/Quiz_Packages/Play/WorkingQuiz.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quiz-Belegarbeit/Quiz_Packages/Settings/GUI_Settings.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quiz-Belegarbeit/Quiz_Packages/Settings/GUI_Settings.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quiz-Belegarbeit/Quiz_Packages/Settings/Settings.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quiz-Belegarbeit/Quiz_Packages/Settings/Settings.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quiz-Belegarbeit/Quiz_Packages/Start_Question.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quiz-Belegarbeit/Quiz_Packages/Start_Question.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Quiz_Packages/File/Frage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Quiz_Packages/File/Frage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Quiz_Packages/Play/WorkingQuiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Quiz_Packages/Play/WorkingQuiz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Quiz_Packages/new.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Quiz_Packages/new.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -13,11 +29,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Quiz_Packages/Settings/GUI_Settings.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Quiz_Packages/File/Readtxt.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="50" selection-start-line="13" selection-start-column="50" selection-end-line="13" selection-end-column="50" />
+            <state relative-caret-position="17">
+              <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Quiz_Packages/Play/QuizController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-237">
+              <caret line="47" column="39" selection-start-line="47" selection-start-column="39" selection-end-line="47" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -43,7 +71,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Quiz_Packages/Play/GUI_QuizSpielen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
+            <state relative-caret-position="-493">
               <caret line="9" column="53" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
               <folding>
                 <element signature="e#878#967#0" expanded="true" />
@@ -55,8 +83,45 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Quiz_Packages/File/Frage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1343">
-              <caret line="86" column="28" selection-start-line="86" selection-start-column="28" selection-end-line="86" selection-end-column="28" />
+            <state relative-caret-position="185">
+              <caret line="145" column="39" selection-start-line="145" selection-start-column="29" selection-end-line="145" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Quiz_Packages/Play/WorkingQuiz.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="128">
+              <caret line="75" column="47" selection-start-line="75" selection-start-column="47" selection-end-line="75" selection-end-column="47" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#5973#5974#0" expanded="true" />
+                <element signature="e#6096#6097#0" expanded="true" />
+                <element signature="e#6224#6225#0" expanded="true" />
+                <element signature="e#6314#6315#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Quiz_Packages/File/FragenKatalog.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2518">
+              <caret line="6" column="51" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Quiz_Packages/File/FileController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1525">
+              <caret line="112" column="15" selection-start-line="112" selection-start-column="15" selection-end-line="112" selection-end-column="15" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -109,7 +174,6 @@
         <option value="$PROJECT_DIR$/src/Quiz_Packages/Settings/Setting_Controller.java" />
         <option value="$PROJECT_DIR$/src/Quiz_Packages/File/Readtxt.java" />
         <option value="$PROJECT_DIR$/src/Quiz_Packages/new.txt" />
-        <option value="$PROJECT_DIR$/src/Quiz_Packages/File/Frage.java" />
         <option value="$PROJECT_DIR$/src/Quiz_Packages/Play/GUI_QuizSpielen.java" />
         <option value="$PROJECT_DIR$/src/Quiz_Packages/Settings/GUI_Settings.java" />
         <option value="$PROJECT_DIR$/src/Quiz_Packages/File/GUI_Frage.java" />
@@ -117,13 +181,14 @@
         <option value="$PROJECT_DIR$/src/Quiz_Packages/Play/GetStats.java" />
         <option value="$PROJECT_DIR$/src/Quiz_Packages/File/FileController.java" />
         <option value="$PROJECT_DIR$/src/Quiz_Packages/Play/QuizController.java" />
+        <option value="$PROJECT_DIR$/src/Quiz_Packages/File/Frage.java" />
         <option value="$PROJECT_DIR$/src/Quiz_Packages/Play/WorkingQuiz.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="985" />
-    <option name="y" value="110" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
     <option name="width" value="975" />
     <option name="height" value="1050" />
   </component>
@@ -255,6 +320,8 @@
       <workItem from="1550600248828" duration="70000" />
       <workItem from="1550661937428" duration="483000" />
       <workItem from="1550672659617" duration="196000" />
+      <workItem from="1550676232152" duration="255000" />
+      <workItem from="1550767426024" duration="2541000" />
     </task>
     <task id="LOCAL-00001" summary="Started new Repo">
       <created>1546514352464</created>
@@ -337,13 +404,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43215000" />
+    <option name="totallyTimeSpent" value="46011000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20268457" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2080537" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -352,7 +419,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.38526914" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.38526914" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -483,54 +550,10 @@
     <entry file="file://$PROJECT_DIR$/out/production/Quiz-Belegarbeit/Quiz_Packages/Settings/Settings.class">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quiz_Packages/File/FileController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="112" column="15" selection-start-line="112" selection-start-column="15" selection-end-line="112" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quiz_Packages/File/FragenKatalog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="51" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Quiz_Packages/Settings/Settings.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="369">
           <caret line="62" column="97" selection-start-line="62" selection-start-column="97" selection-end-line="62" selection-end-column="97" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quiz_Packages/Play/QuizController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="47" column="39" selection-start-line="47" selection-start-column="39" selection-end-line="47" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quiz_Packages/File/Readtxt.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2533">
-          <caret line="152" column="95" selection-start-line="152" selection-start-column="95" selection-end-line="152" selection-end-column="95" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quiz_Packages/Play/WorkingQuiz.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1428">
-          <caret line="87" column="12" selection-start-line="87" selection-start-column="10" selection-end-line="87" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -913,6 +936,390 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/FilePackage.uml">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>Quiz_Packages.File</OriginalElement>
+          <nodes>
+            <node x="293.2749999999999" y="1146.0">Quiz_Packages.File.FileController</node>
+            <node x="346.0" y="774.0">Quiz_Packages.File.Readtxt</node>
+            <node x="41.52499999999998" y="0.0">Quiz_Packages.File.GUI_Frage</node>
+            <node x="20.0" y="874.5">Quiz_Packages.File.FileController.Listen</node>
+            <node x="666.6833333333333" y="209.0">Quiz_Packages.File.Frage</node>
+            <node x="669.0" y="785.5">Quiz_Packages.File.FragenKatalog</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="Quiz_Packages.File.FragenKatalog" target="Quiz_Packages.File.FragenKatalog">
+              <point x="0.0" y="114.5" />
+              <point x="825.0" y="1054.5" />
+              <point x="629.0" y="1054.5" />
+              <point x="629.0" y="823.6666666666667" />
+              <point x="-156.0" y="-76.33333333333326" />
+            </edge>
+            <edge source="Quiz_Packages.File.FragenKatalog" target="Quiz_Packages.File.Frage">
+              <point x="104.0" y="-114.5" />
+              <point x="929.0" y="754.0" />
+              <point x="906.7833333333333" y="754.0" />
+              <point x="68.60000000000002" y="148.0" />
+            </edge>
+            <edge source="Quiz_Packages.File.FileController.Listen" target="Quiz_Packages.File.FileController">
+              <point x="31.75" y="25.5" />
+              <point x="178.75" y="1116.0" />
+              <point x="329.425" y="1116.0" />
+              <point x="-84.34999999999991" y="-180.5" />
+            </edge>
+            <edge source="Quiz_Packages.File.FileController" target="Quiz_Packages.File.Readtxt">
+              <point x="36.14999999999998" y="-180.5" />
+              <point x="449.9249999999999" y="1096.0" />
+              <point x="582.7" y="1096.0" />
+              <point x="105.20000000000005" y="126.0" />
+            </edge>
+            <edge source="Quiz_Packages.File.Readtxt" target="Quiz_Packages.File.Readtxt">
+              <point x="0.0" y="126.0" />
+              <point x="477.5" y="1066.0" />
+              <point x="306.0" y="1066.0" />
+              <point x="306.0" y="816.0" />
+              <point x="-131.5" y="-84.0" />
+            </edge>
+            <edge source="Quiz_Packages.File.GUI_Frage" target="Quiz_Packages.File.GUI_Frage">
+              <point x="-113.25" y="357.0" />
+              <point x="79.27499999999998" y="734.0" />
+              <point x="21.524999999999977" y="734.0" />
+              <point x="21.524999999999977" y="357.0" />
+              <point x="-151.0" y="-0.0" />
+            </edge>
+            <edge source="Quiz_Packages.File.FileController.Listen" target="Quiz_Packages.File.GUI_Frage">
+              <point x="0.0" y="-25.5" />
+              <point x="147.0" y="754.0" />
+              <point x="154.77499999999998" y="754.0" />
+              <point x="-37.75" y="357.0" />
+            </edge>
+            <edge source="Quiz_Packages.File.FileController" target="Quiz_Packages.File.FileController.Listen">
+              <point x="-108.44999999999993" y="-180.5" />
+              <point x="305.325" y="1126.0" />
+              <point x="115.25" y="1126.0" />
+              <point x="-31.75" y="25.5" />
+            </edge>
+            <edge source="Quiz_Packages.File.FileController" target="Quiz_Packages.File.FileController">
+              <point x="0.0" y="180.5" />
+              <point x="413.7749999999999" y="1527.0" />
+              <point x="273.2749999999999" y="1527.0" />
+              <point x="273.2749999999999" y="1326.5" />
+              <point x="-120.5" y="-0.0" />
+            </edge>
+            <edge source="Quiz_Packages.File.FileController" target="Quiz_Packages.File.Frage">
+              <point x="108.45000000000005" y="-180.5" />
+              <point x="522.2249999999999" y="1126.0" />
+              <point x="991.5" y="1126.0" />
+              <point x="991.5" y="754.0" />
+              <point x="975.3833333333333" y="754.0" />
+              <point x="137.20000000000005" y="148.0" />
+            </edge>
+            <edge source="Quiz_Packages.File.FileController.Listen" target="Quiz_Packages.File.FileController.Listen">
+              <point x="-95.25" y="25.5" />
+              <point x="51.75" y="945.5" />
+              <point x="0.0" y="945.5" />
+              <point x="0.0" y="900.0" />
+              <point x="-127.0" y="-0.0" />
+            </edge>
+            <edge source="Quiz_Packages.File.Frage" target="Quiz_Packages.File.Frage">
+              <point x="-137.2" y="148.0" />
+              <point x="700.9833333333333" y="525.0" />
+              <point x="646.6833333333333" y="525.0" />
+              <point x="646.6833333333333" y="357.0" />
+              <point x="-171.5" y="-0.0" />
+            </edge>
+            <edge source="Quiz_Packages.File.FileController" target="Quiz_Packages.File.FragenKatalog">
+              <point x="60.25" y="-180.5" />
+              <point x="474.0249999999999" y="1106.0" />
+              <point x="887.4" y="1106.0" />
+              <point x="62.39999999999998" y="114.5" />
+            </edge>
+            <edge source="Quiz_Packages.File.FileController" target="Quiz_Packages.File.GUI_Frage">
+              <point x="-12.049999999999955" y="-180.5" />
+              <point x="401.72499999999997" y="1086.0" />
+              <point x="295.5" y="1086.0" />
+              <point x="295.5" y="754.0" />
+              <point x="305.775" y="754.0" />
+              <point x="113.25" y="357.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.6000000000000001" x="-76.0" y="838.0" />
+          <SelectedNodes>
+            <node>Quiz_Packages.File.FileController.Listen</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Constructors</Category>
+            <Category>Methods</Category>
+            <Category>Properties</Category>
+            <Category>Inner Classes</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PlayPackage.uml">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>Quiz_Packages.Play</OriginalElement>
+          <nodes>
+            <node x="175.5451388888889" y="1051.0">Quiz_Packages.Play.QuizController</node>
+            <node x="285.71180555555554" y="1297.0">Quiz_Packages.Play.QuizController.Listener</node>
+            <node x="374.25" y="267.0">Quiz_Packages.Play.GUI_QuizSpielen</node>
+            <node x="20.0" y="0.0">Quiz_Packages.Play.GetStats</node>
+            <node x="63.25" y="421.0">Quiz_Packages.Play.WorkingQuiz</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="Quiz_Packages.Play.WorkingQuiz" target="Quiz_Packages.Play.GetStats">
+              <point x="90.33333333333331" y="-203.0" />
+              <point x="289.0833333333333" y="247.0" />
+              <point x="270.25" y="247.0" />
+              <point x="107.25" y="103.5" />
+            </edge>
+            <edge source="Quiz_Packages.Play.QuizController.Listener" target="Quiz_Packages.Play.QuizController">
+              <point x="-95.25" y="-25.5" />
+              <point x="317.46180555555554" y="1277.0" />
+              <point x="294.7951388888889" y="1277.0" />
+              <point x="-39.75" y="93.0" />
+            </edge>
+            <edge source="Quiz_Packages.Play.WorkingQuiz" target="Quiz_Packages.Play.WorkingQuiz">
+              <point x="-90.33333333333331" y="203.0" />
+              <point x="108.41666666666669" y="847.0" />
+              <point x="43.25" y="847.0" />
+              <point x="43.25" y="624.0" />
+              <point x="-135.5" y="-0.0" />
+            </edge>
+            <edge source="Quiz_Packages.Play.QuizController.Listener" target="Quiz_Packages.Play.GUI_QuizSpielen">
+              <point x="95.25" y="-25.5" />
+              <point x="507.96180555555554" y="1277.0" />
+              <point x="566.5972222222222" y="1277.0" />
+              <point x="566.5972222222222" y="1031.0" />
+              <point x="583.375" y="1031.0" />
+              <point x="89.625" y="357.0" />
+            </edge>
+            <edge source="Quiz_Packages.Play.QuizController" target="Quiz_Packages.Play.QuizController">
+              <point x="-119.25" y="93.0" />
+              <point x="215.2951388888889" y="1257.0" />
+              <point x="155.5451388888889" y="1257.0" />
+              <point x="155.5451388888889" y="1144.0" />
+              <point x="-159.0" y="-0.0" />
+            </edge>
+            <edge source="Quiz_Packages.Play.QuizController" target="Quiz_Packages.Play.WorkingQuiz">
+              <point x="-119.25000000000006" y="-93.0" />
+              <point x="215.29513888888886" y="1031.0" />
+              <point x="198.75" y="1031.0" />
+              <point x="0.0" y="203.0" />
+            </edge>
+            <edge source="Quiz_Packages.Play.GetStats" target="Quiz_Packages.Play.GetStats">
+              <point x="-107.25" y="103.5" />
+              <point x="55.75" y="227.0" />
+              <point x="0.0" y="227.0" />
+              <point x="0.0" y="103.5" />
+              <point x="-143.0" y="-0.0" />
+            </edge>
+            <edge source="Quiz_Packages.Play.QuizController" target="Quiz_Packages.Play.GUI_QuizSpielen">
+              <point x="119.24999999999994" y="-93.0" />
+              <point x="453.79513888888886" y="1031.0" />
+              <point x="523.625" y="1031.0" />
+              <point x="29.875" y="357.0" />
+            </edge>
+            <edge source="Quiz_Packages.Play.QuizController" target="Quiz_Packages.Play.QuizController.Listener">
+              <point x="119.24999999999994" y="93.0" />
+              <point x="453.79513888888886" y="1277.0" />
+              <point x="444.46180555555554" y="1277.0" />
+              <point x="31.75" y="-25.5" />
+            </edge>
+            <edge source="Quiz_Packages.Play.GUI_QuizSpielen" target="Quiz_Packages.Play.GUI_QuizSpielen">
+              <point x="-89.625" y="357.0" />
+              <point x="404.125" y="1001.0" />
+              <point x="354.25" y="1001.0" />
+              <point x="354.25" y="624.0" />
+              <point x="-119.5" y="-0.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.8" x="-196.0" y="101.0" />
+          <SelectedNodes>
+            <node>Quiz_Packages.Play.QuizController.Listener</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Constructors</Category>
+            <Category>Methods</Category>
+            <Category>Properties</Category>
+            <Category>Inner Classes</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Quiz_Packages.uml">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>Quiz_Packages</OriginalElement>
+          <nodes>
+            <node x="231.0" y="9.826171875">Quiz_Packages.Play</node>
+            <node x="228.24305555555554" y="178.826171875">Quiz_Packages.File</node>
+            <node x="199.63888888888886" y="297.826171875">Quiz_Packages.Start_Question</node>
+            <node x="40.0" y="9.826171875">Quiz_Packages.Settings</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="Quiz_Packages.File" target="Quiz_Packages.File">
+              <point x="-24.250000000000004" y="14.5" />
+              <point x="252.49305555555554" y="237.826171875" />
+              <point x="198.24305555555554" y="237.826171875" />
+              <point x="198.24305555555554" y="196.951171875" />
+              <point x="-48.5" y="3.625" />
+            </edge>
+            <edge source="Quiz_Packages.Play" target="Quiz_Packages.Play">
+              <point x="-35.0" y="14.5" />
+              <point x="246.0" y="68.826171875" />
+              <point x="201.0" y="68.826171875" />
+              <point x="201.0" y="27.951171875" />
+              <point x="-50.0" y="3.625" />
+            </edge>
+            <edge source="Quiz_Packages.File" target="Quiz_Packages.Settings">
+              <point x="-43.111111111111114" y="-14.5" />
+              <point x="233.63194444444443" y="158.826171875" />
+              <point x="110.58333333333331" y="158.826171875" />
+              <point x="10.083333333333314" y="14.5" />
+            </edge>
+            <edge source="Quiz_Packages.Play" target="Quiz_Packages.File">
+              <point x="25.0" y="14.5" />
+              <point x="306.0" y="138.826171875" />
+              <point x="298.2986111111111" y="138.826171875" />
+              <point x="21.55555555555557" y="-14.5" />
+            </edge>
+            <edge source="Quiz_Packages.Start_Question" target="Quiz_Packages.File">
+              <point x="-42.0" y="-25.5" />
+              <point x="241.63888888888886" y="277.826171875" />
+              <point x="300.99305555555554" y="277.826171875" />
+              <point x="24.25" y="14.5" />
+            </edge>
+            <edge source="Quiz_Packages.Settings" target="Quiz_Packages.Settings">
+              <point x="-30.25" y="14.5" />
+              <point x="70.25" y="68.826171875" />
+              <point x="10.0" y="68.826171875" />
+              <point x="10.0" y="24.326171875" />
+              <point x="-60.5" y="-0.0" />
+            </edge>
+            <edge source="Quiz_Packages.File" target="Quiz_Packages.Play">
+              <point x="-10.777777777777771" y="-14.5" />
+              <point x="265.96527777777777" y="108.826171875" />
+              <point x="276.0" y="108.826171875" />
+              <point x="-5.0" y="14.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="-231.0" y="2.0" />
+          <SelectedNodes>
+            <node>Quiz_Packages.File</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Constructors</Category>
+            <Category>Methods</Category>
+            <Category>Properties</Category>
+            <Category>Inner Classes</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SettingsPackage.uml">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>Quiz_Packages.Settings</OriginalElement>
+          <nodes>
+            <node x="219.44833333333327" y="542.0">Quiz_Packages.Settings.Setting_Controller</node>
+            <node x="362.0" y="0.0">Quiz_Packages.Settings.GUI_Settings</node>
+            <node x="55.0" y="121.0">Quiz_Packages.Settings.Settings</node>
+            <node x="251.43166666666656" y="733.0">Quiz_Packages.Settings.Setting_Controller.Listen</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="Quiz_Packages.Settings.Setting_Controller.Listen" target="Quiz_Packages.Settings.GUI_Settings">
+              <point x="95.25" y="-25.5" />
+              <point x="473.68166666666656" y="708.0" />
+              <point x="543.96" y="708.0" />
+              <point x="543.96" y="522.0" />
+              <point x="571.125" y="522.0" />
+              <point x="89.625" y="236.0" />
+            </edge>
+            <edge source="Quiz_Packages.Settings.GUI_Settings" target="Quiz_Packages.Settings.GUI_Settings">
+              <point x="-89.625" y="236.0" />
+              <point x="391.875" y="492.0" />
+              <point x="342.0" y="492.0" />
+              <point x="342.0" y="236.0" />
+              <point x="-119.5" y="-0.0" />
+            </edge>
+            <edge source="Quiz_Packages.Settings.Setting_Controller" target="Quiz_Packages.Settings.GUI_Settings">
+              <point x="90.375" y="-70.5" />
+              <point x="430.32333333333327" y="522.0" />
+              <point x="511.375" y="522.0" />
+              <point x="29.875" y="236.0" />
+            </edge>
+            <edge source="Quiz_Packages.Settings.Setting_Controller.Listen" target="Quiz_Packages.Settings.Setting_Controller">
+              <point x="-31.75" y="-25.5" />
+              <point x="346.68166666666656" y="708.0" />
+              <point x="339.94833333333327" y="708.0" />
+              <point x="0.0" y="70.5" />
+            </edge>
+            <edge source="Quiz_Packages.Settings.Setting_Controller" target="Quiz_Packages.Settings.Setting_Controller.Listen">
+              <point x="80.33333333333326" y="70.5" />
+              <point x="420.2816666666665" y="708.0" />
+              <point x="410.18166666666656" y="708.0" />
+              <point x="31.75" y="-25.5" />
+            </edge>
+            <edge source="Quiz_Packages.Settings.Settings" target="Quiz_Packages.Settings.Settings">
+              <point x="-106.80000000000001" y="115.0" />
+              <point x="81.69999999999999" y="371.0" />
+              <point x="35.0" y="371.0" />
+              <point x="35.0" y="312.6666666666667" />
+              <point x="-133.5" y="76.66666666666669" />
+            </edge>
+            <edge source="Quiz_Packages.Settings.Setting_Controller" target="Quiz_Packages.Settings.Settings">
+              <point x="-90.375" y="-70.5" />
+              <point x="249.57333333333327" y="522.0" />
+              <point x="241.89999999999998" y="522.0" />
+              <point x="53.39999999999998" y="115.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.6000000000000001" x="-247.0" y="372.0" />
+          <SelectedNodes>
+            <node>Quiz_Packages.Settings.Setting_Controller.Listen</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Constructors</Category>
+            <Category>Methods</Category>
+            <Category>Properties</Category>
+            <Category>Inner Classes</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quiz_Packages/File/Readtxt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Quiz_Packages/Settings/Setting_Controller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1088">
@@ -927,9 +1334,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quiz_Packages/File/GUI_Frage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1275">
+          <caret line="207" column="70" selection-start-line="207" selection-start-column="70" selection-end-line="207" selection-end-column="70" />
+          <folding>
+            <element signature="e#1068#1157#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quiz_Packages/Play/QuizController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-237">
+          <caret line="47" column="39" selection-start-line="47" selection-start-column="39" selection-end-line="47" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Quiz_Packages/Play/GUI_QuizSpielen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
+        <state relative-caret-position="-493">
           <caret line="9" column="53" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
           <folding>
             <element signature="e#878#967#0" expanded="true" />
@@ -937,19 +1361,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quiz_Packages/File/Frage.java">
+    <entry file="file://$PROJECT_DIR$/src/Quiz_Packages/File/FragenKatalog.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1343">
-          <caret line="86" column="28" selection-start-line="86" selection-start-column="28" selection-end-line="86" selection-end-column="28" />
+        <state relative-caret-position="-2518">
+          <caret line="6" column="51" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quiz_Packages/File/GUI_Frage.java">
+    <entry file="file://$PROJECT_DIR$/src/Quiz_Packages/File/FileController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1275">
-          <caret line="207" column="70" selection-start-line="207" selection-start-column="70" selection-end-line="207" selection-end-column="70" />
+        <state relative-caret-position="-1525">
+          <caret line="112" column="15" selection-start-line="112" selection-start-column="15" selection-end-line="112" selection-end-column="15" />
           <folding>
-            <element signature="e#1068#1157#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quiz_Packages/File/Frage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="145" column="39" selection-start-line="145" selection-start-column="29" selection-end-line="145" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quiz_Packages/Play/WorkingQuiz.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="75" column="47" selection-start-line="75" selection-start-column="47" selection-end-line="75" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5973#5974#0" expanded="true" />
+            <element signature="e#6096#6097#0" expanded="true" />
+            <element signature="e#6224#6225#0" expanded="true" />
+            <element signature="e#6314#6315#0" expanded="true" />
           </folding>
         </state>
       </provider>

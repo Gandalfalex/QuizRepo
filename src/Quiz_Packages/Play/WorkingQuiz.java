@@ -3,6 +3,7 @@ package Quiz_Packages.Play;
 import Quiz_Packages.File.Frage;
 import Quiz_Packages.File.FragenKatalog;
 
+import java.lang.reflect.Array;
 import java.util.*;
 
 
@@ -60,26 +61,25 @@ public class WorkingQuiz {
 
     /**
      * mischt die Antworten durch und gibt das Ergebnis zurück / Shuffles the Answers and returns the result
-     * @param temp Liste aller Strings
+     * @param infomations Liste aller Strings
      * @return temp Strings in randomisierter Reiehenfolge
      */
-    public List<String> mixAnswers(List<String> temp){					// Übergebener Parameter temp
-        List<Integer> zahl = new ArrayList<>();							// zahl als neue Array-Liste
-        List<String> oldInformations = temp;							// speichere temp in Variable "oldInformation"
-        Random rand = new Random();										// erstelle neue Random-Zahl mit Java-Befehl Random()
-		
-		//der ZahlenArray wird mit Zahlen von 1-4 random gefüllt. Zahlen stellen dann die Antworten A-D da.
-        //So werden die Antworten random verteilt
-        while (zahl.size() < 4) {                                       // solange wie die Zahl kleiner als 4, tue:    / Alter Kommentar: r steht für die Anzahl an Fragen, bekommt man aus der Settings-Klasse
-            int i = rand.nextInt(4)+1;                                  // neue Random Zahl i (Integer); nextInt(4), addiere 1 
-            if (!zahl.contains(i))                                      // Liste darf diese Zahl i nicht enthalten
-                zahl.add(i);                                            // dann wird sie geaddet (wenn nicht in Liste enthalten)
+    public List<String> mixAnswers(List<String> infomations){					// Übergebener Parameter temp
+
+        Random rand = new Random();
+
+
+        for (int i = 1; i <=4; i++){
+            int random = rand.nextInt(4)+1;
+            String s = infomations.get(random);
+            infomations.set(random,infomations.get(i));
+            infomations.set(i, s);
+
+            System.out.println("swapped " + i + " with " + random);
         }
-        temp.set(1,oldInformations.get(zahl.get(0)));					// zahl enthählt die Nummern von 1 - 4 random, die Fragen werden hier einfach nur ausgetauscht
-        temp.set(2,oldInformations.get(zahl.get(1)));
-        temp.set(3,oldInformations.get(zahl.get(2)));
-        temp.set(4,oldInformations.get(zahl.get(3)));
-        return temp;													// gebe temp zurück
+
+
+        return infomations;
     }		
 
 

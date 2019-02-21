@@ -141,11 +141,15 @@ public class Frage {
 	
 	/**
 	 * Setter-Methode um Anzahl der Chancen zu verändern
-	 * @param chances (int)
 	 * @return chances
 	 */
-    public void setChances(int chances){
-        this.chances = chances;
+    public ArrayList<String> getAnswers(){
+        ArrayList<String> temp = new ArrayList<>();
+        temp.add(answer1);
+        temp.add(answer2);
+        temp.add(answer3);
+        temp.add(answer4);
+        return temp;
     }
 
 }
